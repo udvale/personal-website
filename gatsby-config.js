@@ -3,7 +3,7 @@ const config = require('./src/config');
 module.exports = {
   siteMetadata: {
     title: 'Udval E.',
-    siteUrl: 'https://udvale.netlify.com', // No trailing slash allowed!
+    siteUrl: 'https://udvale.vercel.app', // No trailing slash allowed!
     image: '/', // Path to your image you placed in the 'static' folder
   },
   plugins: [
