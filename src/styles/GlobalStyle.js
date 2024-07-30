@@ -52,20 +52,20 @@ const GlobalStyle = createGlobalStyle`
 
   /* Scrollbar Styles */
   html {
-    scrollbar-width: thin;
-    scrollbar-color: var(--dark-slate) var(--navy);
-  }
-  ::-webkit-scrollbar {
-    width: 12px;
-  }
-  ::-webkit-scrollbar-track {
-    background: var(--navy);
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: var(--dark-slate);
-    border: 3px solid var(--navy);
-    border-radius: 10px;
-  }
+  //   scrollbar-width: thin;
+  //   scrollbar-color: var(--dark-slate) var(--navy);
+  // }
+  // ::-webkit-scrollbar {
+  //   width: 12px;
+  // }
+  // ::-webkit-scrollbar-track {
+  //   background: var(--navy);
+  // }
+  // ::-webkit-scrollbar-thumb {
+  //   background-color: var(--dark-slate);
+  //   border: 3px solid var(--navy);
+  //   border-radius: 10px;
+  // }
 
   body {
     margin: 0;
