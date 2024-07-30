@@ -1,3 +1,5 @@
+#Personal Website
+Portfolio Website Made with React.JS and CSS.
 
 ## 🛠 Installation & Set Up
 
@@ -7,36 +9,24 @@
    npm install -g gatsby-cli
    ```
 
-2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
-
-   ```sh
-   nvm install
-   ```
-
-3. Install dependencies
+2. Install dependencies
 
    ```sh
    yarn
    ```
 
-4. Start the development server
+3. Start the development server
 
    ```sh
    npm start
    ```
 
-## 🚀 Building and Running for Production
+## 🚀 Building Production
 
 1. Generate a full static production build
 
    ```sh
    npm run build
-   ```
-
-1. Preview the site as it will appear once deployed
-
-   ```sh
-   npm run serve
    ```
 
 
