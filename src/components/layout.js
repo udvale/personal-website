@@ -14,7 +14,6 @@ const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
 
-  // Sets target="_blank" rel="noopener noreferrer" on external links
   const handleExternalLinks = () => {
     const allLinks = Array.from(document.querySelectorAll('a'));
     if (allLinks.length > 0) {
@@ -62,9 +61,6 @@ const Layout = ({ children, location }) => {
           ) : (
             <StyledContent>
               <Nav isHome={isHome} />
-              {/* <Social isHome={isHome} /> */}
-              {/* <Email isHome={isHome} /> */}
-
               <div id="content">
                 {children}
                 <Footer />
