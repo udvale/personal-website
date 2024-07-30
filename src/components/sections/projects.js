@@ -14,6 +14,13 @@ const projectsData = [
     github: 'https://github.com/udvale/Expense-Tracker',
   },
   {
+    title: 'Task Reminder Bot',
+    description:
+      'A simple Telegram bot to help you manage your daily tasks by sending reminders at specified intervals. ',
+    skills: ['Node.js', 'Telegram Bot API'],
+    github: 'https://github.com/udvale/reminder-bot',
+  },
+  {
     title: 'Task Manager',
     description:
       'Simple task management tool available as both a web application and a Google Chrome extension.',
