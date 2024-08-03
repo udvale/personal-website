@@ -1,7 +1,7 @@
 # Personal Website
 Portfolio Website Made with React.JS and CSS.
 
-## 🛠 Installation & Set Up
+## Installation & Set Up
 
 1. Install the Gatsby CLI
 
@@ -21,9 +21,9 @@ Portfolio Website Made with React.JS and CSS.
    npm start
    ```
 
-## 🚀 Building Production
+## Building Production
 
-1. Generate a full static production build
+1. Generate production build
 
    ```sh
    npm run build
