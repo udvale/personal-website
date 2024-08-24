@@ -121,7 +121,7 @@ const Education = () => {
     {
       name: 'Forage - Cognizant Artificial Intelligence Simulation',
       link:
-        'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Cognizant/5N2ygyhzMWjKQmgCK_Cognizant_A8Ye9jvhe2GdBy9y3_1718762487158_completion_certificate.pdf',
+        '/certifications/cognizant-certificate.pdf',
     },
     {
       name: 'Forage - Goldman Sachs Software Engineering Simulation',
@@ -132,6 +132,11 @@ const Education = () => {
       name: 'Forage - JPMorgan Software Engineering Simulation',
       link:
         'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/J.P.%20Morgan/R5iK7HMxJGBgaSbvk_J.P.%20Morgan_A8Ye9jvhe2GdBy9y3_1702748189482_completion_certificate.pdf',
+    },
+    {
+      name: 'CodePath Intermediate Technical Interview Prep',
+      link:
+        '/certifications/TIP102.pdf',
     },
   ];
 

@@ -95,11 +95,11 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hi! I'm Udval, a computer science student with a math minor at Dickinson College. My
-              primary interests are in software engineering, development, and machine learning.
-              Currently, I am studying the Machine Learning Specialization on Coursera.
-              Additionally, I am enrolled in Dialpad's Dialership program, an exclusive summer
-              initiative featuring various weekly virtual sessions and workshops.
+            Hi! I’m Udval, a computer science student at Dickinson College, also pursuing a minor in mathematics. 
+            My primary passions lie in software engineering, development, and machine learning. 
+            I am currently deepening my knowledge through the Machine Learning Specialization on Coursera, which is equipping me with cutting-edge skills and insights.
+            Additionally, I am enrolled in Dialpad's Dialership program, an exclusive summer
+            initiative featuring various weekly virtual sessions and workshops.
             </p>
 
             <p className="sub-title">Some technologies I am associated with:</p>
