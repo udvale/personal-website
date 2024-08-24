@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
+// import codepathPDF from './certifications/TIP102.pdf';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -121,7 +122,7 @@ const Education = () => {
     {
       name: 'Forage - Cognizant Artificial Intelligence Simulation',
       link:
-        '/certifications/cognizant-certificate.pdf',
+        'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Cognizant/5N2ygyhzMWjKQmgCK_Cognizant_A8Ye9jvhe2GdBy9y3_1718762487158_completion_certificate.pdf',
     },
     {
       name: 'Forage - Goldman Sachs Software Engineering Simulation',
@@ -135,8 +136,7 @@ const Education = () => {
     },
     {
       name: 'CodePath Intermediate Technical Interview Prep',
-      link:
-        '/certifications/TIP102.pdf',
+      link: './certifications/TIP102.pdf',
     },
   ];
 
