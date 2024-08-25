@@ -136,7 +136,7 @@ const Education = () => {
     },
     {
       name: 'CodePath Intermediate Technical Interview Prep',
-      link: './certifications/TIP102.pdf',
+      link: 'https://drive.google.com/file/d/1Sjou7FeTqTCLadWh2gOUzE2bV7Pj7GkI/preview',
     },
   ];
 
