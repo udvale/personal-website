@@ -2,9 +2,9 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Udval E.',
-    siteUrl: 'https://udvale.vercel.app', // No trailing slash allowed!
-    image: '/', // Path to your image you placed in the 'static' folder
+    title: 'Udval Enkhtaivan',
+    siteUrl: 'https://udvale.me',
+    image: '/', 
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -23,7 +23,7 @@ module.exports = {
         background_color: config.colors.green,
         theme_color: config.colors.green,
         display: 'minimal-ui',
-        icon: 'src/images/bar.PNG',
+        icon: 'src/images/logo2.png',
       },
     },
     `gatsby-plugin-offline`,
