@@ -220,7 +220,7 @@ const Projects = () => {
   }, []);
 
   const projectInner = project => {
-    const { title, skills, github, description } = project;
+    const { title, skills, github, description, website } = project;
 
     return (
       <div className="project-inner">
