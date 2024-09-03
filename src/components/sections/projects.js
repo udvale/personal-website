@@ -12,6 +12,7 @@ const projectsData = [
       'A full-stack application for tracking expenses and budgeting, with user authentication for personalized financial management.',
     skills: ['Next.js', 'React', 'PostgreSQL'],
     github: 'https://github.com/udvale/Expense-Tracker',
+    website: 'https://budget-bee-manager.vercel.app/',
   },
   {
     title: 'Task Reminder Bot',
@@ -26,6 +27,7 @@ const projectsData = [
       'Simple task management tool available as both a web application and a Google Chrome extension.',
     skills: ['HTML', 'CSS', 'Javascript'],
     github: 'https://github.com/udvale/Task-Manage',
+    website: 'https://chromewebstore.google.com/detail/task-manager/dadckocfilhmalhhcafdghhoeahnfhaf?authuser=0&hl=en&pli=1',
   },
   {
     title: 'Calander Appointment Booker',
@@ -233,6 +235,11 @@ const Projects = () => {
                   <Icon name="GitHub" />
                 </a>
               )}
+              {website && (
+              <a href={website} aria-label="External Link" target="_blank" rel="noreferrer">
+                <Icon name="External" /> 
+              </a>
+            )}
             </div>
           </div>
 
