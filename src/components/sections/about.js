@@ -97,9 +97,8 @@ const About = () => {
             <p>
             Hi! I’m Udval, a computer science student at Dickinson College, also pursuing a minor in mathematics. 
             My primary passions lie in software engineering, development, and machine learning. 
-            I am currently deepening my knowledge through the Machine Learning Specialization on Coursera, which is equipping me with cutting-edge skills and insights.
-            Additionally, I am enrolled in Dialpad's Dialership program, an exclusive summer
-            initiative featuring various weekly virtual sessions and workshops.
+            I am currently deepening my knowledge through the Machine Learning Specialization on Coursera, and
+            Generative AI with AWS on Udacity.
             </p>
 
             <p className="sub-title">Some technologies I am associated with:</p>

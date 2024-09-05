@@ -151,6 +151,7 @@ const TextRotator = () => {
     'I\'m a senior at Dickinson College.',
     'Passionate about software development and management',
     'and a fanatic for good coffee and tea.',
+    'These days I weirdly into watching ASMR videos.',
     'I\'m also an unabashed mint chocolate supporter',
     'who plays sudoku for stress relief.',
   ];

@@ -138,6 +138,10 @@ const Education = () => {
       name: 'CodePath Intermediate Technical Interview Prep',
       link: 'https://drive.google.com/file/d/1Sjou7FeTqTCLadWh2gOUzE2bV7Pj7GkI/preview',
     },
+    {
+      name: 'Dialpad - Dialership 2024 program',
+      link: 'https://drive.google.com/file/d/1h3XE9eaqjiPaFtt0zhrOJ5vvCYv0lY_5/preview',
+    },
   ];
 
   return (
