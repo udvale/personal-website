@@ -8,6 +8,7 @@ import {
   IconLinkedin,
   IconLoader,
   IconLogo,
+  IconPen,
 } from '@components/icons';
 
 const Icon = ({ name }) => {
@@ -26,6 +27,8 @@ const Icon = ({ name }) => {
       return <IconLoader />;
     case 'Logo':
       return <IconLogo />;
+    case 'Medium':
+      return <IconPen />;
     default:
       return <IconExternal />;
   }

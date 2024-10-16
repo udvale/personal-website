@@ -195,7 +195,11 @@ const Hero = () => {
   );
   const three = <TextRotator />;
   const four = (
-    <a className="email-link" href="mailto:udvlenkhtaivan@gmail.com">
+    <a
+      className="email-link"
+      href="https://www.linkedin.com/in/udvale"
+      target="_blank"
+      rel="noreferrer">
       Say Hi!
     </a>
   );
@@ -227,7 +231,7 @@ const Hero = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/me2.jpg"
+              src="../../images/me4.jpg"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}

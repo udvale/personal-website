@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
-// import codepathPDF from './certifications/TIP102.pdf';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -101,6 +100,7 @@ const Education = () => {
     'Data Structures and Algorithms',
     'Object-Oriented Programming',
     'Computer Networks',
+    'Operating Systems',
     'Database Systems and Data Management',
     'Discreate Mathematics',
     'Linear Algebra',
@@ -108,6 +108,7 @@ const Education = () => {
     'Open Source Software/Web Development ',
     'Agile and Scrum Development',
     'Machine Learning Specialization /in progress/',
+    'Artificial Interlligence',
   ];
 
   const certificates = [

@@ -12,6 +12,10 @@ module.exports = {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/udvale',
     },
+    {
+      name: 'Medium',
+      url: 'https://medium.com/@udvle',
+    },
   ],
 
   navLinks: [
@@ -34,8 +38,9 @@ module.exports = {
   ],
 
   colors: {
-    green: '#111509',
+    green: '#6b9080',
     navy: '#0a192f',
+    darkNavy: '#020c1b',
   },
 
   srConfig: (delay = 200, viewFactor = 0.25) => ({

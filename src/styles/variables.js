@@ -22,7 +22,7 @@ const variables = css`
     --fz-xxl: 22px;
     --fz-heading: 32px;
 
-    --border-radius: 10px;
+    --border-radius: 20px;
     --nav-height: 100px;
     --nav-scroll-height: 100px;
 

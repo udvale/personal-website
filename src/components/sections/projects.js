@@ -7,7 +7,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 // Project data
 const projectsData = [
   {
-    title: 'Expense Tracker',
+    title: 'ZenBugetbee',
     description:
       'A full-stack application for tracking expenses and budgeting, with user authentication for personalized financial management.',
     skills: ['Next.js', 'React', 'PostgreSQL'],
@@ -15,26 +15,43 @@ const projectsData = [
     website: 'https://budget-bee-manager.vercel.app/',
   },
   {
+    title: 'Stock Prediction with ML',
+    description:
+      'A machine learning project that predicts Google Stock Prices by comparing two popular methods: Linear Regression and Long Short-Term Memory (LSTM).',
+    skills: ['Python', 'TensorFlow', 'Scikit-learn', 'Yahoo Finance API'],
+    github: 'https://github.com/udvale/Stock_Prediction',
+    website:
+      'https://medium.com/@udvle/predicting-google-stock-prices-with-machine-learning-73b34fc7407a',
+  },
+  {
+    title: 'Flutter Calander',
+    description:
+      'A cross-platform calendar app built with Flutter, similar to Google Calendar, for managing appointments.',
+    skills: ['Flutter', 'FastAPI', 'MySQL'],
+    github: 'https://github.com/udvale/flutter_calendar',
+  },
+  {
+    title: 'Pomo-AI with Spotify',
+    description:
+      'A customizable Pomodoro timer integrated with Spotify for syncing playlists and improving productivity.',
+    skills: ['Typescript', 'Google Gemini API', 'Spotify API'],
+    github: 'https://github.com/udvale/Pomodoro-App',
+  },
+  {
+    title: 'Task Manager',
+    description:
+      'A lightweight task management tool, available both as a web application and as a Google Chrome extension.',
+    skills: ['HTML', 'CSS', 'Javascript'],
+    github: 'https://github.com/udvale/Task-Manage',
+    website:
+      'https://chromewebstore.google.com/detail/task-manager/dadckocfilhmalhhcafdghhoeahnfhaf?authuser=0&hl=en&pli=1',
+  },
+  {
     title: 'Task Reminder Bot',
     description:
       'A simple Telegram bot to help you manage your daily tasks by sending reminders at specified intervals. ',
     skills: ['Node.js', 'Telegram Bot API'],
     github: 'https://github.com/udvale/reminder-bot',
-  },
-  {
-    title: 'Task Manager',
-    description:
-      'Simple task management tool available as both a web application and a Google Chrome extension.',
-    skills: ['HTML', 'CSS', 'Javascript'],
-    github: 'https://github.com/udvale/Task-Manage',
-    website: 'https://chromewebstore.google.com/detail/task-manager/dadckocfilhmalhhcafdghhoeahnfhaf?authuser=0&hl=en&pli=1',
-  },
-  {
-    title: 'Calander Appointment Booker',
-    description:
-      'A Flutter-based application for managing appointments with user-friendly calendar functionality.',
-    skills: ['Flutter', 'FastAPI', 'MySQL'],
-    github: 'https://github.com/udvale/flutter_calendar',
   },
   {
     title: 'Multiplayer Hangman Game',
@@ -46,7 +63,7 @@ const projectsData = [
   {
     title: 'Portfolio Website',
     description:
-      'Personal Porfolio Website built using React and CSS. Showcasing projects, skills, and contact information.',
+      'A personal portfolio website built using React.js and CSS, showcasing my skills and projects.',
     skills: ['React', 'CSS'],
     github: 'https://github.com/udvale/personal-website',
   },
@@ -63,7 +80,7 @@ const StyledProjectsSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 900px;
+  max-width: 1050px;
   margin: 0 auto;
 
   .projects-heading {
@@ -94,7 +111,8 @@ const StyledProjectsSection = styled.section`
   .projects-grid {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 15px;
     margin-top: 20px;
     padding: 0;
@@ -102,6 +120,7 @@ const StyledProjectsSection = styled.section`
     @media (max-width: 1080px) {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
+    grid-auto-rows: minmax(300px, auto);
   }
 `;
 
@@ -140,7 +159,7 @@ const StyledProject = styled.li`
       .folder {
         color: var(--green);
         svg {
-          width: 35px;
+          width: 45px;
           height: 35px;
         }
       }
@@ -236,10 +255,10 @@ const Projects = () => {
                 </a>
               )}
               {website && (
-              <a href={website} aria-label="External Link" target="_blank" rel="noreferrer">
-                <Icon name="External" /> 
-              </a>
-            )}
+                <a href={website} aria-label="External Link" target="_blank" rel="noreferrer">
+                  <Icon name="External" />
+                </a>
+              )}
             </div>
           </div>
 
@@ -286,7 +305,7 @@ const Projects = () => {
                     key={i}
                     ref={el => (revealProjects.current[i] = el)}
                     style={{
-                      transitionDelay: `${i * 40}ms`,
+                      transitionDelay: `${i * 150}ms`,
                     }}>
                     {projectInner(project)}
                   </StyledProject>
@@ -298,5 +317,4 @@ const Projects = () => {
     </StyledProjectsSection>
   );
 };
-
 export default Projects;
