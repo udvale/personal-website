@@ -117,8 +117,20 @@ const Education = () => {
       link: 'https://www.udemy.com/certificate/UC-4c6aeb98-8559-48e3-ba3d-3cd6fbf93be9/',
     },
     {
+      name: 'Udacity - Generative AI with AWS',
+      link: 'https://drive.google.com/file/d/1hvuSnlaLlQs1dL-avz_IaMyE7-TpMOSh/preview',
+    },
+    {
       name: 'IBM - Introduction to Project Management',
       link: 'https://www.coursera.org/account/accomplishments/certificate/8TPXBDKGQWAU',
+    },
+    {
+      name: 'CodePath Intermediate Technical Interview Prep',
+      link: 'https://drive.google.com/file/d/1Sjou7FeTqTCLadWh2gOUzE2bV7Pj7GkI/preview',
+    },
+    {
+      name: 'Dialpad - Dialership 2024 program',
+      link: 'https://drive.google.com/file/d/1h3XE9eaqjiPaFtt0zhrOJ5vvCYv0lY_5/preview',
     },
     {
       name: 'Forage - Cognizant Artificial Intelligence Simulation',
@@ -134,14 +146,6 @@ const Education = () => {
       name: 'Forage - JPMorgan Software Engineering Simulation',
       link:
         'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/J.P.%20Morgan/R5iK7HMxJGBgaSbvk_J.P.%20Morgan_A8Ye9jvhe2GdBy9y3_1702748189482_completion_certificate.pdf',
-    },
-    {
-      name: 'CodePath Intermediate Technical Interview Prep',
-      link: 'https://drive.google.com/file/d/1Sjou7FeTqTCLadWh2gOUzE2bV7Pj7GkI/preview',
-    },
-    {
-      name: 'Dialpad - Dialership 2024 program',
-      link: 'https://drive.google.com/file/d/1h3XE9eaqjiPaFtt0zhrOJ5vvCYv0lY_5/preview',
     },
   ];
 
