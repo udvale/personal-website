@@ -237,12 +237,17 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hi! I'm Udval, a computer science student with a minor in math at Dickinson College,
-              deeply passionate about software engineering, development, and machine learning. I'm
-              currently enhancing my skills through the{' '}
-              <u>Machine Learning Specialization on Coursera</u>, and I've recently been sponsored
-              by AWS to join the <u>AI Programming with Python Nanodegree</u>. I’m excited to
-              continue exploring the intersection of innovation and technology.
+              Hi! I'm Udval, a computer science student with a minor in math at Dickinson College. I
+              am deeply passionate about blending analytical thinking, software engineering, and
+              machine learning to drive innovative solutions. To gain deeper insights into data
+              analysis, I’m currently taking the{' '}
+              <u>Data Analysis with Power BI course on Coursera</u> and have applied my skills in
+              projects like <u>Stock Prediction</u>, where I leveraged machine learning models to
+              analyze trends and forecast outcomes. Additionally, I’m enhancing my skills through
+              the <u>Machine Learning Specialization on Coursera</u> and am an{' '}
+              <u>AWS-sponsored participant in the AI Programming with Python Nanodegree</u>. My
+              journey is fueled by a curiosity to explore the intersection of technology and impact,
+              constantly striving to solve complex challenges with creative, data-driven approaches.
             </p>
 
             <p className="sub-title">Some technologies I am associated with:</p>
@@ -251,8 +256,11 @@ const About = () => {
             </ul>
 
             <p className="sub-text">
-              Outside of work and studying, I enjoy baking, doing pilates/yoga, and finding good
-              coffee. I'm also interested in learning new tech skills and applying them in practice.
+              Outside of coding and studying, I enjoy exploring new hobbies like baking (especially
+              gluten-free and vegan recipes!), cooking creative meals, practicing pilates and yoga,
+              and hunting for great coffee spots. These activities inspire my creativity and
+              attention to detail, which I bring to my projects. I’m always curious to learn new
+              technologies and find creative ways to apply them in real-world scenarios.
             </p>
           </div>
         </StyledText>
