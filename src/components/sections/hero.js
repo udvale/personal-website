@@ -53,9 +53,15 @@ const StyledHeroSection = styled.section`
     color: var(--green);
   }
 
-  .email-link {
-    ${({ theme }) => theme.mixins.contactButton};
+  .buttons {
+    display: flex;
+    gap: 20px;
     margin-top: 50px;
+  }
+
+  .email-link,
+  .resume-link {
+    ${({ theme }) => theme.mixins.contactButton};
   }
 `;
 
@@ -148,11 +154,11 @@ const TextRotator = () => {
   const [index, setIndex] = useState(0);
   const texts = [
     'Nice to meet you!',
-    'I\'m a senior at Dickinson College.',
+    "I'm a senior at Dickinson College.",
     'Passionate about software development and management',
     'and a fanatic for good coffee and tea.',
     'These days I weirdly into watching ASMR videos.',
-    'I\'m also an unabashed mint chocolate supporter',
+    "I'm also an unabashed mint chocolate supporter",
     'who plays sudoku for stress relief.',
   ];
 
@@ -194,17 +200,26 @@ const Hero = () => {
     </div>
   );
   const three = <TextRotator />;
-  const four = (
-    <a
-      className="email-link"
-      href="https://www.linkedin.com/in/udvale"
-      target="_blank"
-      rel="noreferrer">
-      Say Hi!
-    </a>
+  const buttons = (
+    <div className="buttons">
+      <a
+        className="email-link"
+        href="https://www.linkedin.com/in/udvale"
+        target="_blank"
+        rel="noreferrer">
+        Say Hi!
+      </a>
+      <a
+        className="resume-link"
+        href="https://drive.google.com/file/d/102S10YRjA8OOH9oJf5p-6rfIDzX18Di2/view"
+        target="_blank"
+        rel="noreferrer">
+        Resume!
+      </a>
+    </div>
   );
 
-  const items = [one, two, three, four];
+  const items = [one, two, three, buttons];
 
   return (
     <StyledHeroSection id="home" ref={revealContainer}>

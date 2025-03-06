@@ -217,17 +217,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = [
-    'Java',
-    'Javascript',
-    'React',
-    'Node.js',
-    'Python',
-    'SQL',
-    'Next.js',
-    'MATLAB',
-    'Typescript',
-  ];
+  const skills = ['Java', 'Javascript', 'React', 'Node.js', 'Python', 'SQL', 'MATLAB', 'C'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -238,16 +228,16 @@ const About = () => {
           <div>
             <p>
               Hi! I'm Udval, a computer science student with a minor in math at Dickinson College. I
-              am deeply passionate about blending analytical thinking, software engineering, and
-              machine learning to drive innovative solutions. To gain deeper insights into data
-              analysis, I’m currently taking the{' '}
+              love building things, solving problems, and figuring out how technology works in the
+              real world. Right now, I’m working on two projects—a full-stack Pomodoro app with API
+              integration and an image classification model using machine learning in Python (as
+              part of my AI Programming with Python Nanodegree). <br />
+              To gain deeper insights into data analysis, I’m currently taking the{' '}
               <u>Data Analysis with Power BI course on Coursera</u> and have applied my skills in
               projects like <u>Stock Prediction</u>, where I leveraged machine learning models to
               analyze trends and forecast outcomes. Additionally, I’m enhancing my skills through
               the <u>Machine Learning Specialization on Coursera</u> and am an{' '}
-              <u>AWS-sponsored participant in the AI Programming with Python Nanodegree</u>. My
-              journey is fueled by a curiosity to explore the intersection of technology and impact,
-              constantly striving to solve complex challenges with creative, data-driven approaches.
+              <u>AWS-sponsored participant in the AI Programming with Python Nanodegree</u>.
             </p>
 
             <p className="sub-title">Some technologies I am associated with:</p>
@@ -258,9 +248,8 @@ const About = () => {
             <p className="sub-text">
               Outside of coding and studying, I enjoy exploring new hobbies like baking (especially
               gluten-free and vegan recipes!), cooking creative meals, practicing pilates and yoga,
-              and hunting for great coffee spots. These activities inspire my creativity and
-              attention to detail, which I bring to my projects. I’m always curious to learn new
-              technologies and find creative ways to apply them in real-world scenarios.
+              and hunting for great coffee spots. I enjoy trying new things and working on hands-on
+              projects to better understand the world around me.
             </p>
           </div>
         </StyledText>

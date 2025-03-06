@@ -109,6 +109,7 @@ const Education = () => {
     'Agile and Scrum Development',
     'Machine Learning Specialization /in progress/',
     'Artificial Interlligence',
+    'Elementary Statistics',
   ];
 
   const certificates = [
@@ -131,6 +132,10 @@ const Education = () => {
     {
       name: 'Dialpad - Dialership 2024 program',
       link: 'https://drive.google.com/file/d/1h3XE9eaqjiPaFtt0zhrOJ5vvCYv0lY_5/preview',
+    },
+    {
+      name: 'The Cloud Bootcamp- MultiCloud, DevOps & AI Challenge',
+      link: 'https://drive.google.com/file/d/16WZRhjD0UlidYXucZte1TIoiX9A7-Jhg/view',
     },
     {
       name: 'Forage - Cognizant Artificial Intelligence Simulation',
