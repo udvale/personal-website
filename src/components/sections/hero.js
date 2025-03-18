@@ -105,7 +105,7 @@ const StyledPic = styled.div`
     display: block;
     position: relative;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 30px;
     background-color: var(--green-tint);
 
     &:hover,
@@ -155,11 +155,10 @@ const TextRotator = () => {
   const texts = [
     'Nice to meet you!',
     "I'm a senior at Dickinson College.",
-    'Passionate about software development and management',
-    'and a fanatic for good coffee and tea.',
-    'These days I weirdly into watching ASMR videos.',
-    "I'm also an unabashed mint chocolate supporter",
-    'who plays sudoku for stress relief.',
+    'As an ISTP, I love building, breaking, and exploring new things in software development.',
+    "I'm also a fanatic for good coffee and tea.",
+    "These days, I've been playing Hay Day and Sudoku for stress relief.",
+    "Oh, and I'm an unabashed mint chocolate supporter.",
   ];
 
   useEffect(() => {
@@ -246,9 +245,9 @@ const Hero = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/me4.jpg"
+              src="../../images/me2.png"
               width={500}
-              quality={95}
+              quality={100}
               formats={['AUTO', 'WEBP', 'AVIF']}
               alt="Headshot"
             />
