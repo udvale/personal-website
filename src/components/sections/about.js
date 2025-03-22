@@ -235,9 +235,9 @@ const About = () => {
               To gain deeper insights into data analysis, I’m currently taking the{' '}
               <u>Data Analysis with Power BI course on Coursera</u> and have applied my skills in
               projects like <u>Stock Prediction</u>, where I leveraged machine learning models to
-              analyze trends and forecast outcomes. Additionally, I’m enhancing my skills through
-              the <u>Machine Learning Specialization on Coursera</u> and am an{' '}
-              <u>AWS-sponsored participant in the AI Programming with Python Nanodegree</u>.
+              analyze trends and forecast outcomes. I’ve also developed a strong interest in
+              cybersecurity and am currently enrolled in the{' '}
+              <u>Intermediate Cybersecurity course by CodePath</u>.
             </p>
 
             <p className="sub-title">Some technologies I am associated with:</p>
@@ -249,8 +249,26 @@ const About = () => {
               Outside of coding and studying, I enjoy exploring new hobbies like baking (especially
               gluten-free and vegan recipes!), cooking creative meals, practicing pilates and yoga,
               and hunting for great coffee spots. I enjoy trying new things and working on hands-on
-              projects to better understand the world around me.
+              projects to better understand the world around me. <br />
+              I’m also an amateur pianist (10+ years), and during the pandemic, I finally started
+              practicing a bit more. Never recorded myself before, but here’s a{' '}
+              <u>VERY short clip</u> if you're curious:{' '}
+              <a
+                href="https://www.dropbox.com/scl/fo/6roci218ikv8ylquywxs1/AHcTTAU8YXtEhlkEDJ76HDs?rlkey=yiub1l825pndthv0ixe83ozg4&st=y2fbuqi7&dl=0"
+                target="_blank"
+                rel="noopener noreferrer">
+                Dropbox link
+              </a>
+              .
             </p>
+
+            {/* 
+            <p className="sub-text">
+              Outside of coding and studying, I enjoy exploring new hobbies like baking (especially
+              gluten-free and vegan recipes!), cooking creative meals, practicing pilates and yoga,
+              and hunting for great coffee spots. I enjoy trying new things and working on hands-on
+              projects to better understand the world around me. 
+            </p> */}
           </div>
         </StyledText>
       </div>
