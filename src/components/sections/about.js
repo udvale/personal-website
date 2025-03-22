@@ -257,7 +257,7 @@ const About = () => {
                 href="https://www.dropbox.com/scl/fo/6roci218ikv8ylquywxs1/AHcTTAU8YXtEhlkEDJ76HDs?rlkey=yiub1l825pndthv0ixe83ozg4&st=y2fbuqi7&dl=0"
                 target="_blank"
                 rel="noopener noreferrer">
-                <u>Dropbox link</u>Dropbox link
+                <u>Dropbox link</u>
               </a>
               .
             </p>
