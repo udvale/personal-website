@@ -252,12 +252,12 @@ const About = () => {
               projects to better understand the world around me. <br />
               I’m also an amateur pianist (10+ years), and during the pandemic, I finally started
               practicing a bit more. Never recorded myself before, but here’s a{' '}
-              <u>VERY short clip</u> if you're curious:{' '}
+              <strong>VERY</strong> short clip if you're curious:{' '}
               <a
                 href="https://www.dropbox.com/scl/fo/6roci218ikv8ylquywxs1/AHcTTAU8YXtEhlkEDJ76HDs?rlkey=yiub1l825pndthv0ixe83ozg4&st=y2fbuqi7&dl=0"
                 target="_blank"
                 rel="noopener noreferrer">
-                Dropbox link
+                <u>Dropbox link</u>Dropbox link
               </a>
               .
             </p>
