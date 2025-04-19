@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 // Project data
 const projectsData = [
@@ -306,7 +309,8 @@ const Projects = () => {
                     ref={el => (revealProjects.current[i] = el)}
                     style={{
                       transitionDelay: `${i * 150}ms`,
-                    }}>
+                    }}
+                  >
                     {projectInner(project)}
                   </StyledProject>
                 </CSSTransition>
@@ -318,3 +322,4 @@ const Projects = () => {
   );
 };
 export default Projects;
+
