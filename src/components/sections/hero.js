@@ -245,8 +245,9 @@ const Hero = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/me2.png"
-              width={500}
+              src="../../images/me4.jpg"
+              width={900}
+              height={1100}
               quality={100}
               formats={['AUTO', 'WEBP', 'AVIF']}
               alt="Headshot"
