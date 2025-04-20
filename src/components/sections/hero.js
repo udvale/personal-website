@@ -30,6 +30,7 @@ const StyledHeroSection = styled.section`
     align-items: center;
 
     @media (max-width: 768px) {
+      adding: 80px 20px 40px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
