@@ -29,13 +29,13 @@ const StyledHeroSection = styled.section`
     grid-gap: 50px;
     align-items: center;
 
-    @media (max-width: 768px) {
-      adding: 80px 20px 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-    }
+    // @media (max-width: 768px) {
+    //   adding: 80px 20px 40px;
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: flex-start;
+    //   text-align: left;
+    // }
   }
 
   h1 {
