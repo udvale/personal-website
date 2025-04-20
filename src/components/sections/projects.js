@@ -18,6 +18,13 @@ const projectsData = [
     website: 'https://budget-bee-manager.vercel.app/',
   },
   {
+    title: 'Image Classification',
+    description:
+      'A CNN-based image classifier using PyTorch to distinguish 102 flower species, applying transfer learning and training on the Oxford 102 Flower dataset.',
+    skills: ['Python', 'PyTorch', 'VGG16'],
+    github: 'https://github.com/udvale/image-classification-udacity',
+  },
+  {
     title: 'Stock Prediction with ML',
     description:
       'A machine learning project that predicts Google Stock Prices by comparing two popular methods: Linear Regression and Long Short-Term Memory (LSTM).',
@@ -33,13 +40,13 @@ const projectsData = [
     skills: ['Flutter', 'FastAPI', 'MySQL'],
     github: 'https://github.com/udvale/flutter_calendar',
   },
-  {
-    title: 'Pomo-AI with Spotify',
-    description:
-      'A customizable Pomodoro timer integrated with Spotify for syncing playlists and improving productivity.',
-    skills: ['Typescript', 'Google Gemini API', 'Spotify API'],
-    github: 'https://github.com/udvale/Pomodoro-App',
-  },
+  // {
+  //   title: 'Pomo-AI with Spotify',
+  //   description:
+  //     'A customizable Pomodoro timer integrated with Spotify for syncing playlists and improving productivity.',
+  //   skills: ['Typescript', 'Google Gemini API', 'Spotify API'],
+  //   github: 'https://github.com/udvale/Pomodoro-App',
+  // },
   {
     title: 'Task Manager',
     description:

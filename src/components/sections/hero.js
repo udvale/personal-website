@@ -23,12 +23,6 @@ const StyledHeroSection = styled.section`
   min-height: 100vh;
   padding: 0;
 
-  @media (max-width: 768px) {
-    // display: block;
-    // text-align: center;
-    // justify-content: center;
-  }
-
   .container {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -36,7 +30,10 @@ const StyledHeroSection = styled.section`
     align-items: center;
 
     @media (max-width: 768px) {
-      // display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
     }
   }
 
@@ -62,6 +59,11 @@ const StyledHeroSection = styled.section`
   .email-link,
   .resume-link {
     ${({ theme }) => theme.mixins.contactButton};
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      padding: 20px 30px;
+    }
   }
 `;
 
@@ -218,7 +220,7 @@ const Hero = () => {
     </div>
   );
 
-  const items = [one, two, three, buttons];
+  const items = [one, two, three, buttons, <StyledPic key="pic" />];
 
   return (
     <StyledHeroSection id="home" ref={revealContainer}>
