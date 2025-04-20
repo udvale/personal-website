@@ -29,13 +29,10 @@ const StyledHeroSection = styled.section`
     grid-gap: 50px;
     align-items: center;
 
-    // @media (max-width: 768px) {
-    //   adding: 80px 20px 40px;
-    //   display: flex;
-    //   flex-direction: column;
-    //   align-items: flex-start;
-    //   text-align: left;
-    // }
+    @media (max-height: 760px) and (min-width: 700px), (max-width: 360px) {
+      height: auto;
+      display: block;
+    }
   }
 
   h1 {
@@ -61,9 +58,9 @@ const StyledHeroSection = styled.section`
   .resume-link {
     ${({ theme }) => theme.mixins.contactButton};
 
-    @media (max-width: 768px) {
-      font-size: 1rem;
-      padding: 20px 30px;
+    @media (max-width: 700px) {
+      font-size: 0.8rem;
+      padding: auto;
     }
   }
 `;
@@ -99,7 +96,7 @@ const StyledPic = styled.div`
   max-width: 300px;
 
   @media (max-width: 768px) {
-    margin: 50px auto 0;
+    margin: 30px auto 0;
     width: 70%;
   }
 
