@@ -114,6 +114,10 @@ const Education = () => {
 
   const certificates = [
     {
+      name: 'Intermediate Cybersecurity',
+      link: 'https://drive.google.com/file/d/1iaqLvFdZoytDAf4EH9ObzI4ELLdHAPA2/view',
+    },
+    {
       name: '2023 Web Development Bootcamp',
       link: 'https://www.udemy.com/certificate/UC-4c6aeb98-8559-48e3-ba3d-3cd6fbf93be9/',
     },
@@ -139,18 +143,11 @@ const Education = () => {
     },
     {
       name: 'Forage - Cognizant Artificial Intelligence Simulation',
-      link:
-        'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Cognizant/5N2ygyhzMWjKQmgCK_Cognizant_A8Ye9jvhe2GdBy9y3_1718762487158_completion_certificate.pdf',
+      link: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Cognizant/5N2ygyhzMWjKQmgCK_Cognizant_A8Ye9jvhe2GdBy9y3_1718762487158_completion_certificate.pdf',
     },
     {
       name: 'Forage - Goldman Sachs Software Engineering Simulation',
-      link:
-        'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Goldman%20Sachs/NPdeQ43o8P9HJmJzg_Goldman%20Sachs_A8Ye9jvhe2GdBy9y3_1717220354202_completion_certificate.pdf',
-    },
-    {
-      name: 'Forage - JPMorgan Software Engineering Simulation',
-      link:
-        'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/J.P.%20Morgan/R5iK7HMxJGBgaSbvk_J.P.%20Morgan_A8Ye9jvhe2GdBy9y3_1702748189482_completion_certificate.pdf',
+      link: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Goldman%20Sachs/NPdeQ43o8P9HJmJzg_Goldman%20Sachs_A8Ye9jvhe2GdBy9y3_1717220354202_completion_certificate.pdf',
     },
   ];
 
