@@ -15,13 +15,11 @@ const colorFluctuate = keyframes`
 `;
 
 const StyledHeroSection = styled.section`
-  max-width: 900px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   min-height: 100vh;
-  padding: 0;
 
   .container {
     display: grid;
@@ -29,9 +27,11 @@ const StyledHeroSection = styled.section`
     grid-gap: 50px;
     align-items: center;
 
-    @media (max-height: 760px) and (min-width: 700px), (max-width: 360px) {
-      height: auto;
-      display: block;
+    @media (max-width: 700px) {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 80px 0 40px 0;
     }
   }
 
@@ -95,11 +95,6 @@ const StyledPic = styled.div`
   position: relative;
   max-width: 300px;
 
-  @media (max-width: 768px) {
-    margin: 30px auto 0;
-    width: 70%;
-  }
-
   .wrapper {
     ${({ theme }) => theme.mixins.boxShadow};
     display: block;
@@ -154,10 +149,10 @@ const TextRotator = () => {
   const [index, setIndex] = useState(0);
   const texts = [
     'Nice to meet you!',
-    "I'm a senior at Dickinson College.",
+    "I'm a recent new graduate from Dickinson College.",
     'As an ISTP, I love building, breaking, and exploring new things in software development.',
     "I'm also a fanatic for good coffee and tea.",
-    "These days, I've been playing Hay Day and Sudoku for stress relief.",
+    'Plus and avid Sudoku player.',
     "Oh, and I'm an unabashed mint chocolate supporter.",
   ];
 

@@ -162,7 +162,6 @@ const Education = () => {
               <p className="college">
                 B.S Computer Science - <span className="college-2">Dickinson College</span>
               </p>
-              <p className="graduation">Expected Graduation: May 2025</p>
             </div>
             <p className="sub-title">Relevant Courseworks:</p>
             <ul className="courses-list">

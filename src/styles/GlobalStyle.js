@@ -50,23 +50,6 @@ const GlobalStyle = createGlobalStyle`
     outline-offset: 3px;
   }
 
-  /* Scrollbar Styles */
-  html {
-  //   scrollbar-width: thin;
-  //   scrollbar-color: var(--dark-slate) var(--navy);
-  // }
-  // ::-webkit-scrollbar {
-  //   width: 12px;
-  // }
-  // ::-webkit-scrollbar-track {
-  //   background: var(--navy);
-  // }
-  // ::-webkit-scrollbar-thumb {
-  //   background-color: var(--dark-slate);
-  //   border: 3px solid var(--navy);
-  //   border-radius: 10px;
-  // }
-
   body {
     margin: 0;
     width: 100%;
@@ -99,6 +82,7 @@ const GlobalStyle = createGlobalStyle`
         filter: blur(5px) brightness(0.7);
         transition: var(--transition);
         pointer-events: none;
+        user-select: none;
       }
     }
   }
@@ -114,18 +98,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     width: 100%;
     max-width: 1600px;
-    min-height: 100vh;
-    padding: 200px 150px;
-
-    @media (max-width: 1080px) {
-      padding: 200px 100px;
-    }
-    @media (max-width: 768px) {
-      padding: 150px 50px;
-    }
-    @media (max-width: 480px) {
-      padding: 125px 25px;
-    }
 
     &.fillHeight {
       padding: 0 150px;
