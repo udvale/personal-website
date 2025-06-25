@@ -205,7 +205,7 @@ const Hero = () => {
       </a>
       <a
         className="resume-link"
-        href="https://drive.google.com/file/d/1bmluDFsJOYNS-KKasjTqfKNXMtE-iCYc/view"
+        href="https://drive.google.com/file/d/1WX-R9rydWNtBP_SXLOHvQrvoBdX_LgSc/view"
         target="_blank"
         rel="noreferrer">
         Resume!

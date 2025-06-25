@@ -40,6 +40,8 @@ const Loader = ({ finishLoading }) => {
     return () => clearTimeout(timeout);
   }, []);
 
+
+
   return (
     <StyledLoader className="loader" isMounted={isMounted}>
       <Helmet bodyAttributes={{ class: `hidden` }} />

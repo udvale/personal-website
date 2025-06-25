@@ -80,7 +80,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Java', 'Javascript', 'React', 'Node.js', 'Python', 'SQL', 'MATLAB', 'C'];
+  const skills = ['Java', 'Javascript', 'React', 'Python', 'SQL', 'Node.js', 'MATLAB', 'C'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -95,14 +95,15 @@ const About = () => {
                 science.
                 <br />
                 I love building things, solving problems, and exploring how technology shapes the
-                real world. I'm currently pursuing CompTIA A+ certification to deepen my skills in
-                cybersecurity, while also expanding my expertise in software development, data
-                analysis, and machine learning.
+                real world. I'm currently pursuing CompTIA Security+ certification to deepen my
+                skills in cybersecurity, while also expanding my expertise in software development,
+                data analysis, and machine learning.
                 <br />
-                I'm always eager to collaborate, learn from others, and take on new challenges.
-                Right now, I'm taking the <u>Data Analysis with Power BI course on Coursera</u> and
+                Currently based in "Seattle, WA" and I'm always eager to collaborate, learn from
+                others, and take on new challenges.
+                {/* Right now, I'm taking the <u>Data Analysis with Power BI course on Coursera</u> and
                 applying these skills to projects like <u>Stock Prediction</u>, where I use machine
-                learning models to analyze trends and forecast outcomes.
+                learning models to analyze trends and forecast outcomes. */}
               </p>
             </p>
 

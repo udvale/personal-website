@@ -82,7 +82,6 @@ const GlobalStyle = createGlobalStyle`
         filter: blur(5px) brightness(0.7);
         transition: var(--transition);
         pointer-events: none;
-        user-select: none;
       }
     }
   }

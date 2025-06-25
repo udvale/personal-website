@@ -109,7 +109,7 @@ const Education = () => {
     'Agile and Scrum Development',
     'Machine Learning Specialization /in progress/',
     'Artificial Interlligence',
-    'Elementary Statistics',
+    'Introductory Statistics',
   ];
 
   const certificates = [
