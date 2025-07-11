@@ -99,7 +99,7 @@ const About = () => {
                 skills in cybersecurity, while also expanding my expertise in software development,
                 data analysis, and machine learning.
                 <br />
-                Currently based in "Seattle, WA" and I'm always eager to collaborate, learn from
+                Currently based in Seattle and I'm always eager to collaborate, learn from
                 others, and take on new challenges.
                 {/* Right now, I'm taking the <u>Data Analysis with Power BI course on Coursera</u> and
                 applying these skills to projects like <u>Stock Prediction</u>, where I use machine

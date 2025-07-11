@@ -150,6 +150,7 @@ const TextRotator = () => {
   const texts = [
     'Nice to meet you!',
     "I'm a recent new graduate from Dickinson College.",
+    'I am currently based in Seattle area',
     'As an ISTP, I love building, breaking, and exploring new things in software development.',
     "I'm also a fanatic for good coffee and tea.",
     'Plus and avid Sudoku player.',
@@ -203,13 +204,13 @@ const Hero = () => {
         rel="noreferrer">
         Say Hi!
       </a>
-      <a
+      {/* <a
         className="resume-link"
         href="https://drive.google.com/file/d/1WX-R9rydWNtBP_SXLOHvQrvoBdX_LgSc/view"
         target="_blank"
         rel="noreferrer">
         Resume!
-      </a>
+      </a> */}
     </div>
   );
 
