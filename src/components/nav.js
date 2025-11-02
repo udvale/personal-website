@@ -21,7 +21,7 @@ const StyledHeader = styled.header`
   background-color: var(--dark-green);
   filter: none !important;
   pointer-events: auto !important;
-  user-select: auto !important;
+  // user-select: auto !important;
   backdrop-filter: blur(10px);
   transition: var(--transition);
 

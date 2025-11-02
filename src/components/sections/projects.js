@@ -40,13 +40,6 @@ const projectsData = [
     skills: ['Flutter', 'FastAPI', 'MySQL'],
     github: 'https://github.com/udvale/flutter_calendar',
   },
-  // {
-  //   title: 'Pomo-AI with Spotify',
-  //   description:
-  //     'A customizable Pomodoro timer integrated with Spotify for syncing playlists and improving productivity.',
-  //   skills: ['Typescript', 'Google Gemini API', 'Spotify API'],
-  //   github: 'https://github.com/udvale/Pomodoro-App',
-  // },
   {
     title: 'Task Manager',
     description:
@@ -294,10 +287,6 @@ const Projects = () => {
 
   return (
     <StyledProjectsSection>
-      <h2 className="numbered-heading" ref={revealTitle} id="projects">
-        pet projects
-      </h2>
-
       <ul className="projects-grid">
         {prefersReducedMotion ? (
           <>

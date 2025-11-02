@@ -149,8 +149,7 @@ const TextRotator = () => {
   const [index, setIndex] = useState(0);
   const texts = [
     'Nice to meet you!',
-    "I'm a recent new graduate from Dickinson College.",
-    'I am currently based in Seattle area',
+    "I'm a software developer based in Seattle",
     'As an ISTP, I love building, breaking, and exploring new things in software development.',
     "I'm also a fanatic for good coffee and tea.",
     'Plus and avid Sudoku player.',

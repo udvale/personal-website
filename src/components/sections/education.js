@@ -102,17 +102,21 @@ const Education = () => {
     'Computer Networks',
     'Operating Systems',
     'Database Systems and Data Management',
+    'Computing Abstractions',
     'Discreate Mathematics',
     'Linear Algebra',
     'Computational Mathematics',
     'Open Source Software/Web Development ',
     'Agile and Scrum Development',
-    'Machine Learning Specialization /in progress/',
     'Artificial Interlligence',
     'Introductory Statistics',
   ];
 
   const certificates = [
+    {
+      name: 'Introduction to Azure Cloud Services',
+      link: 'https://drive.google.com/file/d/1hhZrPMWVyG02kwEH8-oiph8u9c7efaf4/view',
+    },
     {
       name: 'Intermediate Cybersecurity',
       link: 'https://drive.google.com/file/d/1iaqLvFdZoytDAf4EH9ObzI4ELLdHAPA2/view',
@@ -138,10 +142,6 @@ const Education = () => {
       link: 'https://drive.google.com/file/d/1h3XE9eaqjiPaFtt0zhrOJ5vvCYv0lY_5/preview',
     },
     {
-      name: 'The Cloud Bootcamp- MultiCloud, DevOps & AI Challenge',
-      link: 'https://drive.google.com/file/d/16WZRhjD0UlidYXucZte1TIoiX9A7-Jhg/view',
-    },
-    {
       name: 'Forage - Cognizant Artificial Intelligence Simulation',
       link: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Cognizant/5N2ygyhzMWjKQmgCK_Cognizant_A8Ye9jvhe2GdBy9y3_1718762487158_completion_certificate.pdf',
     },
@@ -153,7 +153,6 @@ const Education = () => {
 
   return (
     <StyledAboutSection id="education" ref={revealContainer}>
-      <h2 className="numbered-heading">education</h2>
 
       <div className="inner">
         <StyledText>

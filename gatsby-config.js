@@ -3,7 +3,7 @@ const config = require('./src/config');
 module.exports = {
   siteMetadata: {
     title: 'Udval Enkhtaivan',
-    siteUrl: 'https://udvale.me',
+    siteUrl: 'https://udvale.vercel.app',
     image: '/', 
   },
   plugins: [
