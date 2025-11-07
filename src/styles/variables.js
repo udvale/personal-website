@@ -8,6 +8,7 @@ const variables = css`
     --green: #b8d0cb;
     --light-green: #cce3de;
     --navy-shadow: rgba(2, 12, 27, 0.7);
+    --light-purple: #DAB1DA;
 
     --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,
       sans-serif;
@@ -20,6 +21,7 @@ const variables = css`
     --fz-lg: 18px;
     --fz-xl: 20px;
     --fz-xxl: 22px;
+    --fz-xxxl: 28px;
     --fz-heading: 32px;
 
     --border-radius: 20px;

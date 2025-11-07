@@ -28,10 +28,6 @@ module.exports = {
       url: '/about',
     },
     {
-      name: 'EDUCATION',
-      url: '/education',
-    },
-    {
       name: 'PROJECTS',
       url: '/projects',
     },
