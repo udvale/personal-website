@@ -8,7 +8,8 @@ import { StaticImage } from 'gatsby-plugin-image';
 const StyledAboutSection = styled.section`
   max-width: 900px;
   margin: 0 auto;
-  padding: 140px 0;
+  padding: 140px 20px; /* add horizontal padding so content doesn't touch edges on small screens */
+  box-sizing: border-box;
 
   .inner {
     display: flex;
@@ -16,15 +17,22 @@ const StyledAboutSection = styled.section`
 
     @media (max-width: 768px) {
       display: block;
+      /* ensure inner blocks have breathing room on narrow viewports */
+      padding: 0 6px;
     }
   }
 
   .profile-pic {
     display: flex;
-    gap: 60px;
-    justify-content: center; 
+    gap: 40px;
+    justify-content: center;
     align-items: center;
     margin-top: 10px;
+
+    @media (max-width: 768px) {
+      gap: 16px;
+      flex-wrap: wrap;
+    }
   }
 `;
 
@@ -97,14 +105,18 @@ const StyledPic = styled.div`
   margin: 40px auto;
   padding: 4px;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
   .wrapper {
     ${({ theme }) => theme.mixins.boxShadow};
     display: block;
     position: relative;
     width: 100%;
-    border-radius: 24px; /* round the frame */
+    border-radius: 24px;
     background-color: var(--green-tint);
-    padding: 8px; /* inner padding between frame and image */
+    padding: 8px;
 
     &:hover,
     &:focus {
@@ -118,7 +130,7 @@ const StyledPic = styled.div`
 
     .img {
       position: relative;
-      border-radius: 16px; /* round the actual photo corners */
+      border-radius: 16px;
       transition: var(--transition);
       display: block;
       width: 100%;

@@ -27,7 +27,7 @@ const webProjects = [
     title: 'Personal Website',
     description:
       'My personal website built using React and Tailwind CSS, showcasing my projects and skills.',
-    skills: ['React', 'JavaScript', 'Tailwind CSS'],
+    skills: ['React', 'JavaScript', 'CSS'],
     github: 'https://github.com/udvale/personal-website',
     website: 'https://udvale.vercel.app/',
     image: personalWebsiteImg,
@@ -151,6 +151,11 @@ const otherProjects = [
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
 
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
   a {
     position: relative;
     z-index: 1;
@@ -197,7 +202,8 @@ const StyledProject = styled.li`
       }
       @media (max-width: 768px) {
         grid-column: 1 / -1;
-        padding: 40px 40px 30px;
+        /* reduce horizontal padding so content breathes but keeps spacing from edges */
+        padding: 40px 20px 30px;
         text-align: left;
       }
       @media (max-width: 480px) {
@@ -250,16 +256,16 @@ const StyledProject = styled.li`
 
     @media (max-width: 768px) {
       display: flex;
+      grid-row: 1; /* put content above image on small screens */
       flex-direction: column;
       justify-content: center;
       height: 100%;
       grid-column: 1 / -1;
-      padding: 40px 40px 30px;
       z-index: 5;
     }
 
     @media (max-width: 480px) {
-      padding: 30px 25px 20px;
+      padding: 25px 16px 20px;
     }
   }
 
@@ -276,10 +282,10 @@ const StyledProject = styled.li`
     font-size: clamp(24px, 5vw, 28px);
 
     @media (min-width: 768px) {
-      margin: 0 0 20px;
-    }
-
-    @media (max-width: 768px) {
+      grid-column: 1 / -1;
+      height: auto;
+      opacity: 0.95;
+      grid-row: 2; 
       color: var(--white);
 
       a {
@@ -309,8 +315,8 @@ const StyledProject = styled.li`
     color: var(--light-slate);
     font-size: var(--fz-lg);
 
-    @media (max-width: 768px) {
-      padding: 20px 0;
+    @media (max-width: 480px) {
+      padding: 10px 0;
       background-color: transparent;
       box-shadow: none;
 
@@ -392,8 +398,16 @@ const StyledProject = styled.li`
 
     @media (max-width: 768px) {
       grid-column: 1 / -1;
-      height: 100%;
-      opacity: 0.25;
+      height: auto;
+      opacity: 0.95;
+      grid-row: 2;
+    }
+
+    @media (max-width: 992px) {
+      grid-column: 1 / -1;
+      height: auto;
+      opacity: 0.95;
+      grid-row: 2;
     }
 
     &.multiple {
@@ -403,7 +417,7 @@ const StyledProject = styled.li`
       align-items: center;
 
       @media (max-width: 768px) {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
       }
 
       .multi-img {
@@ -425,12 +439,15 @@ const StyledProject = styled.li`
       mix-blend-mode: multiply;
       width: 100%;
       height: auto;
+      cursor: pointer; 
 
       @media (max-width: 768px) {
         object-fit: cover;
-        width: auto;
-        height: 100%;
-        filter: grayscale(100%) contrast(1) brightness(50%);
+        width: 100%;
+        height: auto;
+        max-width: 720px;
+        margin: 0 auto;
+        cursor: default; 
       }
     }
   }
@@ -438,6 +455,14 @@ const StyledProject = styled.li`
 
 const ProjectSection = ({ title, projects, prefersReducedMotion }) => {
   const revealProjects = useRef([]);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const update = () => setIsDesktop(typeof window !== 'undefined' && window.innerWidth >= 768);
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
 
   return (
     <>
@@ -599,11 +624,13 @@ const Projects = () => {
 
   return (
     <section id="projects">
-      <ProjectSection
-        title="Web & Full Stack Projects"
-        projects={webProjects}
-        prefersReducedMotion={prefersReducedMotion}
-      />
+      <div style={{ paddingTop: '50px' }}>
+        <ProjectSection
+          title="Web & Full Stack Projects"
+          projects={webProjects}
+          prefersReducedMotion={prefersReducedMotion}
+        />
+      </div>
 
       <div style={{ marginTop: '200px' }}>
         <ProjectSection
