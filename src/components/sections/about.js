@@ -264,17 +264,18 @@ const About = () => {
           <div>
             <p>
               <p>
-                Hi, I'm Udval, a Software Engineer, focusing on fullstack development,
-                specifically frontend work. I love building digital experiences, solving complex problems, and exploring
-                how technology shapes the world we know today.
+                Hi, I'm Udval, a Software Engineer, focusing on fullstack development, specifically
+                frontend work. I love building digital experiences, solving complex problems, and
+                exploring how technology shapes the world we know today.
                 <br />
                 <br />
-                Currently, I'm practicing Junior Cybersecurity skills through Hack the Box to deepen my capabilities in cybersecurity,
-                while also expanding my expertise in UI development, data analysis, and machine learning.
+                Currently, I'm practicing Junior Cybersecurity skills through Hack the Box to deepen
+                my capabilities in cybersecurity, while also expanding my expertise in UI
+                development, data analysis, and machine learning.
                 <br />
                 <br />
-                Based in Seattle, I'm always eager to collaborate with like-minded professionals, learn from each other,
-                and take on new challenges.
+                Based in Seattle, I'm always eager to collaborate with like-minded professionals,
+                learn from each other, and take on new challenges.
               </p>
             </p>
             <div className="profile-pic">
@@ -338,13 +339,16 @@ const About = () => {
             </ul>
 
             <p className="sub-text">
-              In my personal time, I enjoy exploring gluten-free and vegan recipes, cooking creative meals, practicing pilates and yoga,
-              building puzzles, and hunting for great coffee spots. I enjoy trying new things and
-              working on hands-on projects to better understand the world around me.
+              In my personal time, I enjoy exploring gluten-free and vegan recipes, cooking creative
+              meals, practicing pilates and yoga, building puzzles, and hunting for great coffee
+              spots. I enjoy trying new things and working on hands-on projects to better understand
+              the world around me.
               <br />
               <br />
-              I’m also an amateur pianist (7+ years), that took on practicing more during the pandemic. I used to play mostly for fun, but with more time at home, I started practicing more seriously, video recording myself for the first time. If you're curious, these are{' '} 
-              <strong>VERY</strong> short clips of my practices:{' '}
+              I'm also an amateur pianist (7+ years) who started practicing more seriously during
+              the pandemic. What began as casual playing turned into structured practice sessions,
+              and I even started video recording myself for the first time. If you're curious, here
+              are some <strong>VERY</strong> short clips from my practice sessions:{' '}
               <a
                 href="https://www.dropbox.com/scl/fo/6roci218ikv8ylquywxs1/AHcTTAU8YXtEhlkEDJ76HDs?rlkey=yiub1l825pndthv0ixe83ozg4&st=y2fbuqi7&dl=0"
                 target="_blank"
