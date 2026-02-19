@@ -1,3 +1,5 @@
+import { inject } from '@vercel/analytics';
+inject();
 /**
  * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
  *

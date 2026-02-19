@@ -1,3 +1,5 @@
+import { inject } from '@vercel/analytics';
+inject();
 /**
  * Implement Gatsby's Browser APIs in this file.
  *
