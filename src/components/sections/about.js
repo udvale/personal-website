@@ -264,19 +264,16 @@ const About = () => {
           <div>
             <p>
               <p>
-                Hi, I'm Udval, a recent Dickinson College graduate with a degree in computer
-                science. I'm currently a Software Engineer, focusing on fullstack development
-                especially frontend work. I love building things, solving problems, and exploring
-                how technology shapes the real world. I have interests in cybersecurity, machine
-                learning, and UI development.
+                Hi, I'm Udval, a Software Engineer, focusing on fullstack development,
+                specifically frontend work. I love building digital experiences, solving complex problems, and exploring
+                how technology shapes the world we know today.
                 <br />
                 <br />
-                I'm currently learning about Junior Cybersecuirty path on Hack the Box to deepen my deepen my skills in cybersecurity,
-                while also expanding my expertise in software development, data analysis, and
-                machine learning.
+                Currently, I'm practicing Junior Cybersecurity skills through Hack the Box to deepen my capabilities in cybersecurity,
+                while also expanding my expertise in UI development, data analysis, and machine learning.
                 <br />
                 <br />
-                Currently based in Seattle and I'm always eager to collaborate, learn from others,
+                Based in Seattle, I'm always eager to collaborate with like-minded professionals, learn from each other,
                 and take on new challenges.
               </p>
             </p>
@@ -341,15 +338,13 @@ const About = () => {
             </ul>
 
             <p className="sub-text">
-              Outside of coding and studying, I enjoy exploring new hobbies like baking (especially
-              gluten-free and vegan recipes!), cooking creative meals, practicing pilates and yoga,
+              In my personal time, I enjoy exploring gluten-free and vegan recipes, cooking creative meals, practicing pilates and yoga,
               building puzzles, and hunting for great coffee spots. I enjoy trying new things and
               working on hands-on projects to better understand the world around me.
               <br />
               <br />
-              I’m also an amateur pianist (7+ years), and during the pandemic, I finally started
-              practicing a bit more. Never recorded myself before, but here’s a{' '}
-              <strong>VERY</strong> short clip if you're curious:{' '}
+              I’m also an amateur pianist (7+ years), that took on practicing more during the pandemic. I used to play mostly for fun, but with more time at home, I started practicing more seriously, video recording myself for the first time. If you're curious, these are{' '} 
+              <strong>VERY</strong> short clips of my practices:{' '}
               <a
                 href="https://www.dropbox.com/scl/fo/6roci218ikv8ylquywxs1/AHcTTAU8YXtEhlkEDJ76HDs?rlkey=yiub1l825pndthv0ixe83ozg4&st=y2fbuqi7&dl=0"
                 target="_blank"

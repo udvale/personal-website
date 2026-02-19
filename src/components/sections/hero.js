@@ -375,7 +375,6 @@ const Hero = () => {
         </div>
       </StyledHeroSection>
 
-      {/* icons layer - viewport-wide */}
       {Object.keys(iconPositions).length > 0 && (
         <IconsLayer aria-hidden="false">
           {logos.map(l => {
