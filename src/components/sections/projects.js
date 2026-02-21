@@ -13,12 +13,15 @@ import 'swiper/css/pagination';
 
 import nlpToolImg from '../../images/projects/nlp-tool.png';
 import nlpToolImg2 from '../../images/projects/nlpImg2.png';
+import nlpToolImg3 from '../../images/projects/nlpImg3.png';
 import zenBudgetImg from '../../images/projects/budgetbee.png';
 import imageClassificationImg from '../../images/projects/image-classification.png';
 import stockPredictionImg from '../../images/projects/stock-prediction.png';
 import flutterCalanderImg from '../../images/projects/flutter-calander.png';
+import flutterCalanderImg2 from '../../images/projects/flutter-calander2.png';
 import taskManagerImg from '../../images/projects/task-manager.png';
 import webScraperImg from '../../images/projects/web-scraping.png';
+import webScraperImg2 from '../../images/projects/web-scraping2.png';
 import netflixImg from '../../images/projects/netflix-analysis.png';
 import hangmanImg from '../../images/projects/hangman.png';
 // import lexBotImg from '../../images/projects/lexbot.png';
@@ -41,16 +44,16 @@ const webProjects = [
   {
     title: 'NLP Component Suggestion Tool',
     description:
-      "I built this as a full-stack AI tool that maps natural language queries to VPDS (Visa Product Design System) components using the OpenAI API for semantic clustering. It was my first project using the OpenAI API, and I added regex as a fallback so the tool still works in case the API doesn’t.",
+      "I built this as a full-stack AI tool that maps natural language queries to VPDS (Visa Product Design System) components using the OpenAI API for semantic clustering. It was my first project using the OpenAI API, and I added regex as a fallback so the tool still works in case the API doesn’t.\n\nFor the design, I incorporated VISA's signature blue color scheme and visual style to match their brand identity.",
     skills: ['Next.js', 'TypeScript', 'Python', 'OpenAI API'],
     github: 'https://github.com/udvale/VPDS-Suggestion-Tool',
     website: 'https://vpds-suggestion-tool.vercel.app/',
-    image: [nlpToolImg, nlpToolImg2],
+    image: [nlpToolImg, nlpToolImg3, nlpToolImg2],
   },
   {
     title: 'ZenBugetbee',
     description:
-      "This started as an expense tracker for tracking expenses and budgeting, with user authentication for more personalized financial management. I built it during MLH Global Hacking Week while learning Next.js, and it became my first full-stack project.",
+      "I built this expense tracker during MLH Global Hacking Week while learning Next.js, and it became my first full-stack project. The idea was to create a simple, intuitive tool for managing personal finances with a more vibrant, eye-catching design.\n\nI used Clerk for authentication and PostgreSQL for the database since it`s reliable for storing structured data like user information and transaction records.",
     skills: ['Next.js', 'React', 'PostgreSQL'],
     github: 'https://github.com/udvale/Expense-Tracker',
     website: 'https://budget-bee-manager.vercel.app/',
@@ -62,7 +65,7 @@ const webProjects = [
       "A calendar app inspired by Google Calendar, built with Flutter for managing appointments and internal bookings for company employees during my internship. The goal here was to keep it simple and practical for daily scheduling and real use.",
     skills: ['Flutter', 'FastAPI', 'MySQL'],
     github: 'https://github.com/udvale/flutter_calendar',
-    image: flutterCalanderImg,
+    image: [flutterCalanderImg, flutterCalanderImg2],
   },
   {
     title: 'Task Manager',
@@ -106,7 +109,7 @@ const dataProjects = [
       "A data analysis project that scrapes job postings from Indeed.com to extract insights into the computer science job market. I built this to better understand what skills and roles were actually being asked for in job listings.",
     skills: ['Selenium', 'Python', 'Jupyter Notebook'],
     github: 'https://github.com/udvale/Web-Scraping-Project',
-    image: webScraperImg,
+    image: [webScraperImg, webScraperImg2],
   },
   {
     title: 'Netflix Content Analysis',
@@ -285,7 +288,7 @@ const StyledProject = styled.li`
 
     @media (max-width: 768px) {
       display: flex;
-      grid-row: 1; /* put content above image on small screens */
+      grid-row: 1;
       flex-direction: column;
       justify-content: center;
       height: 100%;
@@ -446,7 +449,6 @@ const StyledProject = styled.li`
 
     &.multiple {
       .swiper {
-        border-radius: var(--border-radius);
         overflow: hidden;
       }
 
@@ -464,11 +466,10 @@ const StyledProject = styled.li`
     }
 
     .img {
-      border-radius: var(--border-radius);
-      border: var(--green-tint) 2px solid;
-      mix-blend-mode: multiply;
+      border-radius: 10px;
+      border: var(--green-tint) 1px solid;
+      // mix-blend-mode: multiply;
       width: 100%;
-      height: auto;
       cursor: pointer;
 
       @media (max-width: 768px) {
@@ -640,9 +641,10 @@ const ProjectSection = ({ title, projects, prefersReducedMotion }) => {
                           <Swiper
                             modules={[Navigation, Pagination]}
                             navigation
+                            autoHeight={true}
                             pagination={{ clickable: true }}
                             loop={true}
-                            spaceBetween={0}
+                            spaceBetween={3}
                             slidesPerView={1}>
                             {image.map((imgSrc, idx) => (
                               <SwiperSlide key={idx}>
