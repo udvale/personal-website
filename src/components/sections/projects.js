@@ -32,8 +32,7 @@ const webProjects = [
   {
     title: 'Personal Website',
     description:
-      // 'My personal website built using React and Tailwind CSS, showcasing my projects and skills.',
-      "Built my personal website using React and Tailwind CSS, using Brittany Chiang's website as reference. Deployed on Vercel, showcases my projects, skills and my interests at the moment.",
+      "This started as my personal website built with React and Tailwind CSS, using Brittany Chiang's website as a reference. I wanted a place to show my projects, skills, and whatever I’m interested in at the moment, so it’s deployed on Vercel and easy to update as things change.",
     skills: ['React', 'JavaScript', 'CSS'],
     github: 'https://github.com/udvale/personal-website',
     website: 'https://udvale.vercel.app/',
@@ -42,7 +41,7 @@ const webProjects = [
   {
     title: 'NLP Component Suggestion Tool',
     description:
-      'Built this during my internship to help developers find the right design system components using natural language. Uses OpenAI for smart matching with regex as a fallback.',
+      "I built this as a full-stack AI tool that maps natural language queries to VPDS (Visa Product Design System) components using the OpenAI API for semantic clustering. It was my first project using the OpenAI API, and I added regex as a fallback so the tool still works in case the API doesn’t.",
     skills: ['Next.js', 'TypeScript', 'Python', 'OpenAI API'],
     github: 'https://github.com/udvale/VPDS-Suggestion-Tool',
     website: 'https://vpds-suggestion-tool.vercel.app/',
@@ -51,7 +50,7 @@ const webProjects = [
   {
     title: 'ZenBugetbee',
     description:
-      'An expense tracker application for tracking expenses and budgeting, with user authentication for personalized financial management.\n\n Built during MLH Global Hacking Week after learning Next.js and this is my first full stack project. ',
+      "This started as an expense tracker for tracking expenses and budgeting, with user authentication for more personalized financial management. I built it during MLH Global Hacking Week while learning Next.js, and it became my first full-stack project.",
     skills: ['Next.js', 'React', 'PostgreSQL'],
     github: 'https://github.com/udvale/Expense-Tracker',
     website: 'https://budget-bee-manager.vercel.app/',
@@ -60,7 +59,7 @@ const webProjects = [
   {
     title: 'Flutter Calander',
     description:
-      'A calendar app mimicking Google Calendar, built with Flutter, for managing appointments/booking for internal use for a company employees.',
+      "A calendar app inspired by Google Calendar, built with Flutter for managing appointments and internal bookings for company employees during my internship. The goal here was to keep it simple and practical for daily scheduling and real use.",
     skills: ['Flutter', 'FastAPI', 'MySQL'],
     github: 'https://github.com/udvale/flutter_calendar',
     image: flutterCalanderImg,
@@ -68,7 +67,7 @@ const webProjects = [
   {
     title: 'Task Manager',
     description:
-      'Task management tool, available both as a web application and as a Google Chrome extension.\n\n I wanted a digital to-do list that can be easily accessed thus I built the tool and also added as an extension for everyday usage.',
+      "This started from wanting a digital to-do list that I could access easily, so I built it as both a web application and a Google Chrome extension for everyday use. I’m still using this tool to this day to manage my own tasks.",
     skills: ['HTML', 'CSS', 'Javascript'],
     github: 'https://github.com/udvale/Task-Manage',
     website:
@@ -82,7 +81,7 @@ const mlProjects = [
   {
     title: 'Image Classification',
     description:
-      'A CNN-based image classifier using PyTorch to distinguish 102 flower species, applying transfer learning and training on the Oxford 102 Flower dataset. Built as part of my Udacity AI Programming Nanodegree.',
+      "A CNN-based image classifier using PyTorch to distinguish 102 flower species, applying transfer learning and training on the Oxford 102 Flower dataset. I built this as part of my Udacity AI Programming Nanodegree to get hands-on experience with deep learning and computer vision.",
     skills: ['Python', 'PyTorch', 'VGG16'],
     github: 'https://github.com/udvale/image-classification-udacity',
     image: imageClassificationImg,
@@ -90,7 +89,7 @@ const mlProjects = [
   {
     title: 'Stock Prediction with ML',
     description:
-      'This is my first machine learning project that predicts Google Stock Prices by comparing two popular methods: Linear Regression and Long Short-Term Memory (LSTM).\n\nAlso, I published my understanding and the results on Medium to share my learning journey.',
+      "This was my first machine learning project and it predicts Google stock prices by comparing two popular methods: Linear Regression and Long Short-Term Memory (LSTM). I also published my understanding and results on Medium to share what I learned through the process.",
     skills: ['Python', 'TensorFlow', 'Scikit-learn', 'Yahoo Finance API'],
     github: 'https://github.com/udvale/Stock_Prediction',
     website:
@@ -104,7 +103,7 @@ const dataProjects = [
   {
     title: 'Web Scraping Analysis',
     description:
-      'A data analysis project that scrapes job postings from Indeed.com to extract insights into the computer science job market.',
+      "A data analysis project that scrapes job postings from Indeed.com to extract insights into the computer science job market. I built this to better understand what skills and roles were actually being asked for in job listings.",
     skills: ['Selenium', 'Python', 'Jupyter Notebook'],
     github: 'https://github.com/udvale/Web-Scraping-Project',
     image: webScraperImg,
@@ -112,7 +111,7 @@ const dataProjects = [
   {
     title: 'Netflix Content Analysis',
     description:
-      'A data analysis project that analyzes Netflix titles to identfy trends in genre performance, country output, and shifts in content strategy.\n\n Built this project to practice my data analysis skills as well as to learn how to use Tableau. ',
+      "A data analysis project that analyzes Netflix titles to identify trends in genre performance, country output, and shifts in content strategy. I worked on this to practice my data analysis skills and also to learn how to use Tableau for visualization.",
     skills: ['Python', 'SQL', 'Tableau', 'PostgreSQL'],
     github: 'https://github.com/udvale/netflix-content-analysis',
     image: netflixImg,
@@ -124,7 +123,7 @@ const otherProjects = [
   {
     title: 'PandOS - OS Development Simulation',
     description:
-      'A custom OS simulator built on the μMPS3 emulator with round-robin scheduling, deadlock detection, and interrupt handling for multitasking across multiple user processes.\n\n This project was part of my Operating Systems course, and I built it to gain hands-on experience with OS concepts and low-level programming.',
+      "A custom OS simulator built on the μMPS3 emulator with round-robin scheduling, deadlock detection, and interrupt handling for multitasking across multiple user processes. This was part of my Operating Systems course and gave me hands-on experience with OS concepts and low-level programming.",
     skills: ['C', 'μMPS'],
     github: 'https://gitfront.io/r/udvale/fakZ4B8NEUod/PandOS/',
     image: pandOsImg,
@@ -132,7 +131,7 @@ const otherProjects = [
   {
     title: 'Task Reminder Bot',
     description:
-      'Built during MLH Global Hacking Week. A Telegram bot that manages daily tasks by sending reminders at specified intervals.',
+      "Built during MLH Global Hacking Week, this is a Telegram bot that manages daily tasks by sending reminders at specified intervals. The idea was to experiment with bots and simple automation while making something actually useful.",
     skills: ['Node.js', 'Telegram Bot API'],
     github: 'https://github.com/udvale/reminder-bot',
     image: taskBotImg,
@@ -140,7 +139,7 @@ const otherProjects = [
   {
     title: 'Multiplayer Hangman Game',
     description:
-      'An interactive hangman game built with Java for my Computer Networks course, featuring real-time multiplayer capabilities using TCP/IP protocol and multi-threading.\n\nI built it to apply my understanding of network programming and concurrency in a fun and engaging way.',
+      "An interactive hangman game built with Java for my Computer Networks course, featuring real-time multiplayer using TCP/IP protocol and multi-threading. The goal was to apply what I learned about network programming and concurrency in a more fun and interactive way.",
     skills: ['Java', 'TCP/IP'],
     github: 'https://github.com/udvale/Hangman-Game',
     image: hangmanImg,
@@ -148,7 +147,7 @@ const otherProjects = [
   {
     title: 'Amazon Lex BankerBot',
     description:
-      'I wanted to create an extension for my full-stack expense tracker that uses a bot. At the same time, I was learning more on AWS thus I built a conversational banking chatbot using AWS Lex, enabling users to check balances, view recent transactions, and transfer funds through natural language interactions.\n\n Planning to integrate this with my expense tracker app in the future.',
+      "I wanted to create an extension for my full-stack expense tracker that uses a bot, and at the same time I was learning more about AWS. So I built a conversational banking chatbot using AWS Lex, enabling users to check balances, view recent transactions, and transfer funds using natural language. I’m planning to integrate this with my expense tracker app in the future.",
     skills: ['AWS Lex', 'AWS CloudFormation', 'AWS Lambda', 'IAM'],
     github: 'https://github.com/udvale/banker-bot',
     image: [lexBot1Img, lexBot2Img],
