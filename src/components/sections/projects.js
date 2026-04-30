@@ -310,7 +310,7 @@ const StyledProject = styled.li`
   }
 
   .project-title {
-    color: var(--lightest-slate);
+    color: var(--light-green);
     font-size: clamp(24px, 5vw, 28px);
 
     @media (min-width: 768px) {
@@ -394,7 +394,7 @@ const StyledProject = styled.li`
 
       li {
         margin: 0 10px 5px 0;
-        color: var(--lightest-slate);
+        color: var(--light-green);
       }
     }
   }
@@ -405,7 +405,7 @@ const StyledProject = styled.li`
     position: relative;
     margin-top: 10px;
     margin-left: -10px;
-    color: var(--lightest-slate);
+    color: var(--green-tint);
 
     a {
       ${({ theme }) => theme.mixins.flexCenter};

@@ -21,8 +21,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background-color: var(--lightest-navy);
-    color: var(--lightest-slate);
+    background-color: var(--light-purple);
+    color: var(--dark-green);
   }
 
   /* Provide basic, default focus styles.*/
@@ -314,7 +314,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   hr {
-    background-color: var(--lightest-navy);
+    background-color: var( --light-green);
     height: 1px;
     border-width: 0px;
     border-style: initial;
