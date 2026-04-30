@@ -85,7 +85,7 @@ const IconsLayer = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 2;
+  z-index: 10;
   pointer-events: none;
 
   .icon {
@@ -173,6 +173,8 @@ const TextRotator = () => {
   return <div className="content">{texts[index]}</div>;
 };
 
+const EXCLUSION = { x1: 0.2, x2: 0.8, y1: 0.15, y2: 0.75 };
+
 const Hero = () => {
   const revealContainer = useRef(null);
   const logos = [
@@ -204,12 +206,9 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, [prefersReducedMotion]);
 
-  const exclusion = { x1: 0.2, x2: 0.8, y1: 0.15, y2: 0.75 };
-
   useEffect(() => {
     if (Object.keys(iconPositions).length > 0) return;
     if (!revealContainer.current) return;
-    const rect = revealContainer.current.getBoundingClientRect();
 
     const basePositions = [
       { xPct: 0.06, yPct: 0.4 },
@@ -232,12 +231,12 @@ const Hero = () => {
       const jitter = 0.04;
       const base = basePositions[i % basePositions.length];
       let xPct = Math.min(0.98, Math.max(0.02, base.xPct + (Math.random() * jitter * 2 - jitter)));
-      let yPct = Math.min(0.98, Math.max(0.02, base.yPct + (Math.random() * jitter * 2 - jitter)));
+      let yPct = Math.min(0.98, Math.max(0.12, base.yPct + (Math.random() * jitter * 2 - jitter)));
       if (
-        xPct >= exclusion.x1 &&
-        xPct <= exclusion.x2 &&
-        yPct >= exclusion.y1 &&
-        yPct <= exclusion.y2
+        xPct >= EXCLUSION.x1 &&
+        xPct <= EXCLUSION.x2 &&
+        yPct >= EXCLUSION.y1 &&
+        yPct <= EXCLUSION.y2
       ) {
         if (xPct < 0.5) {
           xPct = 0.06;
@@ -255,47 +254,13 @@ const Hero = () => {
     const onPointerMove = e => {
       const id = draggingRef.current;
       if (!id) return;
-      const xPct = Math.min(0.99, Math.max(0.01, e.clientX / window.innerWidth));
-      const yPct = Math.min(0.99, Math.max(0.01, e.clientY / window.innerHeight));
+      const { x: ox, y: oy } = pointerOffsetRef.current;
+      const xPct = Math.min(0.99, Math.max(0.01, (e.clientX - ox) / window.innerWidth));
+      const yPct = Math.min(0.99, Math.max(0.01, (e.clientY - oy) / window.innerHeight));
       setIconPositions(prev => ({ ...prev, [id]: { xPct, yPct } }));
     };
 
     const onPointerUp = () => {
-      const id = draggingRef.current;
-      if (!id) return;
-      setIconPositions(prev => {
-        const pos = prev[id];
-        if (pos) {
-          let { xPct, yPct } = pos;
-          if (
-            xPct >= exclusion.x1 &&
-            xPct <= exclusion.x2 &&
-            yPct >= exclusion.y1 &&
-            yPct <= exclusion.y2
-          ) {
-            const toLeft = xPct - exclusion.x1;
-            const toRight = exclusion.x2 - xPct;
-            const toTop = yPct - exclusion.y1;
-            const toBottom = exclusion.y2 - yPct;
-            const minH = Math.min(toLeft, toRight);
-            const minV = Math.min(toTop, toBottom);
-            const margin = 0.05;
-
-            if (minH < minV) {
-              if (toLeft < toRight) xPct = Math.max(0.02, exclusion.x1 - margin);
-              else xPct = Math.min(0.98, exclusion.x2 + margin);
-            } else {
-              if (toTop < toBottom) yPct = Math.max(0.02, exclusion.y1 - margin);
-              else yPct = Math.min(0.98, exclusion.y2 + margin);
-            }
-
-            return { ...prev, [id]: { xPct, yPct } };
-          }
-        }
-
-        return prev;
-      });
-
       draggingRef.current = null;
     };
 
@@ -308,12 +273,22 @@ const Hero = () => {
       window.removeEventListener('pointerup', onPointerUp);
       window.removeEventListener('pointercancel', onPointerUp);
     };
-  }, [exclusion]);
+  }, []);
 
   const onIconPointerDown = (e, id) => {
     e.preventDefault();
-    e.stopPropagation();
+    e.currentTarget.setPointerCapture(e.pointerId);
     draggingRef.current = id;
+    setIconPositions(prev => {
+      const pos = prev[id];
+      if (pos) {
+        pointerOffsetRef.current = {
+          x: e.clientX - pos.xPct * window.innerWidth,
+          y: e.clientY - pos.yPct * window.innerHeight,
+        };
+      }
+      return prev;
+    });
   };
 
   const one = (
