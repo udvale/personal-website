@@ -275,15 +275,15 @@ const Hero = () => {
   const logos = [
     { id: 'pancake', src: pancake },
     { id: 'coffee', src: coffee },
+    { id: 'skincare', src: skincare },
     { id: 'cup', src: cup },
+    { id: 'happy', src: happy },
     { id: 'latte', src: latte },
     { id: 'cosmetic', src: cosmetic },
     { id: 'mirror', src: mirror },
     { id: 'cosmetics', src: cosmetics },
     { id: 'flower', src: flower },
     { id: 'project', src: project },
-    { id: 'skincare', src: skincare },
-    { id: 'happy', src: happy },
     { id: 'sunflower', src: sunflower },
   ];
 
@@ -311,7 +311,7 @@ const Hero = () => {
       { xPct: 0.06, yPct: 0.18 },
       { xPct: 0.08, yPct: 0.38 },
       { xPct: 0.06, yPct: 0.56 },
-      { xPct: 0.09, yPct: 0.72 },
+      { xPct: 0.09, yPct: 0.70 },
       // right column
       { xPct: 0.92, yPct: 0.18 },
       { xPct: 0.9, yPct: 0.38 },
@@ -457,27 +457,29 @@ const Hero = () => {
         </div>
       </StyledHeroSection>
 
-      <StaticIconsLayer aria-hidden="true">
-        {staticStickers.map(s => (
-          <span
-            key={s.id}
-            className={`static-icon${poppedSticker === s.id ? ' popped' : ''}`}
-            onClick={() => {
-              setPoppedSticker(s.id);
-              setTimeout(() => setPoppedSticker(null), 2000);
-            }}
-            style={{
-              left: `${s.xPct * 100}%`,
-              top: `${s.yPct * 100}%`,
-              '--float-dur': `${s.dur}s`,
-              '--float-delay': `${s.delay}s`,
-            }}>
-            <img src={s.src} alt="" draggable={false} />
-          </span>
-        ))}
-      </StaticIconsLayer>
+      {isMounted && (
+        <StaticIconsLayer aria-hidden="true">
+          {staticStickers.map(s => (
+            <span
+              key={s.id}
+              className={`static-icon${poppedSticker === s.id ? ' popped' : ''}`}
+              onClick={() => {
+                setPoppedSticker(s.id);
+                setTimeout(() => setPoppedSticker(null), 2000);
+              }}
+              style={{
+                left: `${s.xPct * 100}%`,
+                top: `${s.yPct * 100}%`,
+                '--float-dur': `${s.dur}s`,
+                '--float-delay': `${s.delay}s`,
+              }}>
+              <img src={s.src} alt="" draggable={false} />
+            </span>
+          ))}
+        </StaticIconsLayer>
+      )}
 
-      {Object.keys(iconPositions).length > 0 && (
+      {isMounted && Object.keys(iconPositions).length > 0 && (
         <IconsLayer aria-hidden="false">
           {logos.map((l, i) => {
             const pos = iconPositions[l.id] || { xPct: 0.5, yPct: 0.5 };
