@@ -117,7 +117,7 @@ const IconsLayer = styled.div`
   z-index: 10;
   pointer-events: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     display: none;
   }
 
@@ -167,7 +167,7 @@ const StaticIconsLayer = styled.div`
   z-index: 9;
   pointer-events: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     display: none;
   }
 
@@ -263,11 +263,11 @@ const TextRotator = () => {
 const EXCLUSION = { x1: 0.2, x2: 0.8, y1: 0.15, y2: 0.78 };
 
 const staticStickers = [
-  { id: 'static-greentea', src: greentea, xPct: 0.344, yPct: 0.28, dur: 3.1, delay: -0.4 },
-  { id: 'static-croissont', src: croissont, xPct: 0.68, yPct: 0.34, dur: 2.9, delay: -1.2 },
-  { id: 'static-bagel', src: bagel, xPct: 0.295, yPct: 0.71, dur: 3.4, delay: -0.8 },
-  { id: 'static-creativity', src: creativity, xPct: 0.644, yPct: 0.55, dur: 3.0, delay: -2.1 },
-  { id: 'static-pisces', src: pisces, xPct: 0.54, yPct: 0.22, dur: 3.3, delay: -1.7 },
+  { id: 'static-greentea', src: greentea, xPct: 0.324, yPct: 0.27, dur: 3.1, delay: -0.4 },
+  { id: 'static-croissont', src: croissont, xPct: 0.715, yPct: 0.32, dur: 2.9, delay: -1.2 },
+  { id: 'static-bagel', src: bagel, xPct: 0.268, yPct: 0.74, dur: 3.4, delay: -0.8 },
+  { id: 'static-creativity', src: creativity, xPct: 0.664, yPct: 0.55, dur: 3.0, delay: -2.1 },
+  { id: 'static-pisces', src: pisces, xPct: 0.54, yPct: 0.18, dur: 3.3, delay: -1.7 },
 ];
 
 const Hero = () => {
