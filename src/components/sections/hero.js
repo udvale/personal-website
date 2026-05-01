@@ -117,6 +117,10 @@ const IconsLayer = styled.div`
   z-index: 10;
   pointer-events: none;
 
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   .icon-wrap {
     position: absolute;
     width: 56px;
@@ -162,6 +166,10 @@ const StaticIconsLayer = styled.div`
   height: 100vh;
   z-index: 9;
   pointer-events: none;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   .static-icon {
     position: absolute;
