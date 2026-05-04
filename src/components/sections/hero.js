@@ -159,11 +159,11 @@ const IconsLayer = styled.div`
 `;
 
 const StaticIconsLayer = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 9;
   pointer-events: none;
 
@@ -263,11 +263,11 @@ const TextRotator = () => {
 const EXCLUSION = { x1: 0.2, x2: 0.8, y1: 0.15, y2: 0.78 };
 
 const staticStickers = [
-  { id: 'static-greentea', src: greentea, xPct: 0.324, yPct: 0.27, dur: 3.1, delay: -0.4 },
-  { id: 'static-croissont', src: croissont, xPct: 0.715, yPct: 0.32, dur: 2.9, delay: -1.2 },
-  { id: 'static-bagel', src: bagel, xPct: 0.268, yPct: 0.74, dur: 3.4, delay: -0.8 },
-  { id: 'static-creativity', src: creativity, xPct: 0.664, yPct: 0.55, dur: 3.0, delay: -2.1 },
-  { id: 'static-pisces', src: pisces, xPct: 0.54, yPct: 0.18, dur: 3.3, delay: -1.7 },
+  { id: 'static-greentea', src: greentea, xPct: 0.242, yPct: 0.27, dur: 3.1, delay: -0.4 },
+  { id: 'static-croissont', src: croissont, xPct: 0.815, yPct: 0.32, dur: 2.9, delay: -1.2 },
+  { id: 'static-bagel', src: bagel, xPct: 0.16, yPct: 0.74, dur: 3.4, delay: -0.8 },
+  { id: 'static-creativity', src: creativity, xPct: 0.74, yPct: 0.55, dur: 3.0, delay: -2.1 },
+  { id: 'static-pisces', src: pisces, xPct: 0.56, yPct: 0.18, dur: 3.3, delay: -1.7 },
 ];
 
 const Hero = () => {
@@ -433,29 +433,27 @@ const Hero = () => {
   const items = [one, two, three, centerSpotify];
 
   return (
-    <>
-      <StyledHeroSection id="home" ref={revealContainer}>
-        <div className="container">
-          <StyledText>
-            {prefersReducedMotion ? (
-              <>
-                {items.map((item, i) => (
-                  <div key={i}>{item}</div>
+    <StyledHeroSection id="home" ref={revealContainer}>
+      <div className="container">
+        <StyledText>
+          {prefersReducedMotion ? (
+            <>
+              {items.map((item, i) => (
+                <div key={i}>{item}</div>
+              ))}
+            </>
+          ) : (
+            <TransitionGroup component={null}>
+              {isMounted &&
+                items.map((item, i) => (
+                  <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
+                    <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
+                  </CSSTransition>
                 ))}
-              </>
-            ) : (
-              <TransitionGroup component={null}>
-                {isMounted &&
-                  items.map((item, i) => (
-                    <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
-                      <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
-                    </CSSTransition>
-                  ))}
-              </TransitionGroup>
-            )}
-          </StyledText>
-        </div>
-      </StyledHeroSection>
+            </TransitionGroup>
+          )}
+        </StyledText>
+      </div>
 
       {isMounted && (
         <StaticIconsLayer aria-hidden="true">
@@ -503,7 +501,7 @@ const Hero = () => {
           })}
         </IconsLayer>
       )}
-    </>
+    </StyledHeroSection>
   );
 };
 
