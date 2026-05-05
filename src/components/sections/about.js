@@ -293,7 +293,7 @@ const StyledSticker = styled.span`
     height: 100%;
     display: block;
     opacity: 0.92;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)) !important;
     transform-origin: center bottom;
     animation: ${floatSway} var(--float-dur, 3s) ease-in-out var(--float-delay, 0s) infinite;
   }
@@ -375,7 +375,12 @@ const About = () => {
               <StyledSticker
                 className={poppedSticker === 'laptop' ? 'popped' : ''}
                 onClick={() => handleStickerClick('laptop')}
-                style={{ left: '-64px', top: '12px', '--float-dur': '3.2s', '--float-delay': '-0.8s' }}>
+                style={{
+                  left: '-64px',
+                  top: '12px',
+                  '--float-dur': '3.2s',
+                  '--float-delay': '-0.8s',
+                }}>
                 <img src={laptop} alt="" draggable={false} />
               </StyledSticker>
               <p>
@@ -385,8 +390,8 @@ const About = () => {
                 <br />
                 <br />
                 Currently, I'm practicing Junior Cybersecurity skills through Hack the Box to deepen
-                my capabilities in cybersecurity, while also expanding my expertise in UI development,
-                data analysis, and machine learning.
+                my capabilities in cybersecurity, while also expanding my expertise in UI
+                development, data analysis, and machine learning.
                 <br />
                 <br />
                 Based in Seattle, I'm always eager to collaborate with like-minded professionals,
@@ -412,7 +417,13 @@ const About = () => {
                 <StyledSticker
                   className={poppedSticker === 'latte' ? 'popped' : ''}
                   onClick={() => handleStickerClick('latte')}
-                  style={{ top: '-14px', right: '-14px', zIndex: 10, '--float-dur': '2.8s', '--float-delay': '-1.5s' }}>
+                  style={{
+                    top: '-14px',
+                    right: '-14px',
+                    zIndex: 10,
+                    '--float-dur': '2.8s',
+                    '--float-delay': '-1.5s',
+                  }}>
                   <img src={latte} alt="" draggable={false} />
                 </StyledSticker>
                 <div className="wrapper">
@@ -463,14 +474,19 @@ const About = () => {
               <StyledSticker
                 className={poppedSticker === 'sudoku' ? 'popped' : ''}
                 onClick={() => handleStickerClick('sudoku')}
-                style={{ right: '-62px', top: '10px', '--float-dur': '3.6s', '--float-delay': '-0.3s' }}>
+                style={{
+                  right: '-62px',
+                  top: '10px',
+                  '--float-dur': '3.6s',
+                  '--float-delay': '-0.3s',
+                }}>
                 <img src={sudoku} alt="" draggable={false} />
               </StyledSticker>
               <p className="sub-text">
-                In my personal time, I enjoy exploring gluten-free and vegan recipes, cooking creative
-                meals, practicing pilates and yoga, building puzzles, and hunting for great coffee
-                spots. I enjoy trying new things and working on hands-on projects to better understand
-                the world around me.
+                In my personal time, I enjoy exploring gluten-free and vegan recipes, cooking
+                creative meals, practicing pilates and yoga, building puzzles, and hunting for great
+                coffee spots. I enjoy trying new things and working on hands-on projects to better
+                understand the world around me.
               </p>
             </div>
             <div style={{ position: 'relative' }}>
@@ -493,11 +509,11 @@ const About = () => {
                 pagination={{ type: 'fraction' }}
                 navigation={true}
                 loop={true}
-                onSlideChange={(swiper) => {
+                onSlideChange={swiper => {
                   setActiveIndex(swiper.realIndex);
                   setTimeout(() => {
                     window.dispatchEvent(new Event('resize'));
-                  }, 200); 
+                  }, 200);
                 }}
                 modules={[Pagination, Navigation]}
                 className="swiper">
@@ -519,17 +535,19 @@ const About = () => {
                       controls={true}
                       width="100%"
                       height="470px"
+                      progressInterval={1000}
                     />
-                    <div style={{ 
-                      position: 'absolute', 
-                      top: '10px', 
-                      left: '10px', 
-                      color: 'var(--green)', 
-                      fontSize: 'var(--fz-sm)',
-                      fontFamily: 'var(--font-mono)',
-                      zIndex: 10,
-                      textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)'
-                    }}>
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: '10px',
+                        left: '10px',
+                        color: 'var(--green)',
+                        fontSize: 'var(--fz-sm)',
+                        fontFamily: 'var(--font-mono)',
+                        zIndex: 10,
+                        textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)',
+                      }}>
                       Victor's Piano Solo - Corpse Bride
                     </div>
                   </div>
@@ -539,21 +557,23 @@ const About = () => {
                   <div style={{ position: 'relative', width: '100%', height: '470px' }}>
                     <ReactPlayer
                       src="https://www.dropbox.com/scl/fi/qef67f4x6h0t5ww70jmi6/clair-de-lune-claude-debussy.mp4?rlkey=cqw2hgbp9wx9yihijgcslp0jn&st=jyyj1et8&raw=1"
-                      playing={activeIndex === 2} 
+                      playing={activeIndex === 2}
                       controls={true}
                       width="100%"
                       height="470px"
+                      progressInterval={1000}
                     />
-                    <div style={{ 
-                      position: 'absolute', 
-                      top: '10px', 
-                      left: '10px', 
-                      color: 'var(--green)', 
-                      fontSize: 'var(--fz-sm)',
-                      fontFamily: 'var(--font-mono)',
-                      zIndex: 10,
-                      textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)'
-                    }}>
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: '10px',
+                        left: '10px',
+                        color: 'var(--green)',
+                        fontSize: 'var(--fz-sm)',
+                        fontFamily: 'var(--font-mono)',
+                        zIndex: 10,
+                        textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)',
+                      }}>
                       Clair de Lune - Debussy
                     </div>
                   </div>
@@ -567,17 +587,19 @@ const About = () => {
                       controls={true}
                       width="100%"
                       height="470px"
+                      progressInterval={1000}
                     />
-                    <div style={{ 
-                      position: 'absolute', 
-                      top: '10px', 
-                      left: '10px', 
-                      color: 'var(--green)', 
-                      fontSize: 'var(--fz-sm)',
-                      fontFamily: 'var(--font-mono)',
-                      zIndex: 10,
-                      textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)'
-                    }}>
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: '10px',
+                        left: '10px',
+                        color: 'var(--green)',
+                        fontSize: 'var(--fz-sm)',
+                        fontFamily: 'var(--font-mono)',
+                        zIndex: 10,
+                        textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)',
+                      }}>
                       Moonlight Sonata op.27 no.2 - Beethoven (1)
                     </div>
                   </div>
@@ -591,17 +613,19 @@ const About = () => {
                       controls={true}
                       width="100%"
                       height="470px"
+                      progressInterval={1000}
                     />
-                    <div style={{ 
-                      position: 'absolute', 
-                      top: '10px', 
-                      left: '10px', 
-                      color: 'var(--green)', 
-                      fontSize: 'var(--fz-sm)',
-                      fontFamily: 'var(--font-mono)',
-                      zIndex: 10,
-                      textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)'
-                    }}>
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: '10px',
+                        left: '10px',
+                        color: 'var(--green)',
+                        fontSize: 'var(--fz-sm)',
+                        fontFamily: 'var(--font-mono)',
+                        zIndex: 10,
+                        textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)',
+                      }}>
                       Moonlight Sonata op.27 no.2 - Beethoven (2)
                     </div>
                   </div>
@@ -615,17 +639,19 @@ const About = () => {
                       controls={true}
                       width="100%"
                       height="470px"
+                      progressInterval={1000}
                     />
-                    <div style={{ 
-                      position: 'absolute', 
-                      top: '10px', 
-                      left: '10px', 
-                      color: 'var(--green)', 
-                      fontSize: 'var(--fz-sm)',
-                      fontFamily: 'var(--font-mono)',
-                      zIndex: 10,
-                      textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)'
-                    }}>
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: '10px',
+                        left: '10px',
+                        color: 'var(--green)',
+                        fontSize: 'var(--fz-sm)',
+                        fontFamily: 'var(--font-mono)',
+                        zIndex: 10,
+                        textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)',
+                      }}>
                       Waltz op.69-1 - Chopin
                     </div>
                   </div>
@@ -639,22 +665,23 @@ const About = () => {
                       controls={true}
                       width="100%"
                       height="470px"
+                      progressInterval={1000}
                     />
-                    <div style={{ 
-                      position: 'absolute', 
-                      top: '10px', 
-                      left: '10px', 
-                      color: 'var(--green)', 
-                      fontSize: 'var(--fz-sm)',
-                      fontFamily: 'var(--font-mono)',
-                      zIndex: 10,
-                      textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)'
-                    }}>
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: '10px',
+                        left: '10px',
+                        color: 'var(--green)',
+                        fontSize: 'var(--fz-sm)',
+                        fontFamily: 'var(--font-mono)',
+                        zIndex: 10,
+                        textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)',
+                      }}>
                       Waltz op.64-2 - Chopin
                     </div>
                   </div>
                 </SwiperSlide>
-
               </Swiper>
             </StyledPianoSwiper>
           </div>
