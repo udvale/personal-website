@@ -343,7 +343,6 @@ const StyledProject = styled.li`
     z-index: 12;
     padding: 20px;
     border-radius: var(--border-radius);
-    background-color: var(--light-navy);
     color: var(--light-slate);
     font-size: var(--fz-lg);
 

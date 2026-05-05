@@ -1,9 +1,16 @@
-import React, { useEffect, useRef } from 'react';
+import React, { act, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
 import { StaticImage } from 'gatsby-plugin-image';
+import ReactPlayer from 'react-player';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'video-react/dist/video-react.css';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -198,17 +205,69 @@ const StyledPic = styled.div`
         object-fit: cover;
       }
 
+      &:hover,
+      &:focus {
+        transform: none;
+
+        &:after {
+          transform: none;
+        }
+      }
+
       &:after {
-        top: 18px;
-        left: 18px;
+        display: none;
       }
     }
+  }
+`;
+
+const StyledPianoSwiper = styled.div`
+  margin: 40px auto;
+  max-width: 850px;
+
+  .swiper {
+    border-radius: 16px;
+    border: 1px solid var(--green-tint);
+    overflow: hidden;
+    user-select: none;
+  }
+
+  .swiper-slide {
+    height: 470px;
+    background: var(--navy);
+    overflow: hidden;
+    z-index: 1;
+
+    > div {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: var(--green);
+
+    &::after {
+      font-size: 20px;
+    }
+  }
+
+  .swiper-pagination-fraction {
+    color: var(--light-slate);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+    padding-bottom: 6px;
+    z-index: 20;       
+    pointer-events: none;
   }
 `;
 
 const About = () => {
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -263,20 +322,18 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              <p>
-                Hi, I'm Udval, a Software Engineer, focusing on fullstack development, specifically
-                frontend work. I love building digital experiences, solving complex problems, and
-                exploring how technology shapes the world we know today.
-                <br />
-                <br />
-                Currently, I'm practicing Junior Cybersecurity skills through Hack the Box to deepen
-                my capabilities in cybersecurity, while also expanding my expertise in UI
-                development, data analysis, and machine learning.
-                <br />
-                <br />
-                Based in Seattle, I'm always eager to collaborate with like-minded professionals,
-                learn from each other, and take on new challenges.
-              </p>
+              Hi, I'm Udval, a Software Engineer, focusing on fullstack development, specifically
+              frontend work. I love building digital experiences, solving complex problems, and
+              exploring how technology shapes the world we know today.
+              <br />
+              <br />
+              Currently, I'm practicing Junior Cybersecurity skills through Hack the Box to deepen
+              my capabilities in cybersecurity, while also expanding my expertise in UI development,
+              data analysis, and machine learning.
+              <br />
+              <br />
+              Based in Seattle, I'm always eager to collaborate with like-minded professionals,
+              learn from each other, and take on new challenges.
             </p>
             <div className="profile-pic">
               <StyledPic className="round">
@@ -347,30 +404,179 @@ const About = () => {
               <br />
               I'm also an amateur pianist (7+ years) who started practicing more seriously during
               the pandemic. What began as casual playing turned into structured practice sessions,
-              and I even started video recording myself for the first time. If you're curious, here
-              are some <strong>VERY</strong> short clips from my practice sessions:{' '}
-              <a
-                href="https://www.dropbox.com/scl/fo/6roci218ikv8ylquywxs1/AHcTTAU8YXtEhlkEDJ76HDs?rlkey=yiub1l825pndthv0ixe83ozg4&st=y2fbuqi7&dl=0"
-                target="_blank"
-                rel="noopener noreferrer">
-                <u>Dropbox link</u>
-              </a>
-              .
+              and I even started video recording myself for the first time. Scroll through the
+              clips below to hear some of my practice sessions!
             </p>
 
-            <StyledPic className="large">
-              <div className="wrapper">
-                <StaticImage
-                  className="img"
-                  src="../../images/piano.JPEG"
-                  width={1800}
-                  height={1100}
-                  quality={100}
-                  formats={['AUTO', 'WEBP', 'AVIF']}
-                  alt="Headshot"
-                />
-              </div>
-            </StyledPic>
+            <StyledPianoSwiper>
+              <Swiper
+                pagination={{ type: 'fraction' }}
+                navigation={true}
+                loop={true}
+                onSlideChange={(swiper) => {
+                  setActiveIndex(swiper.realIndex);
+                  setTimeout(() => {
+                    window.dispatchEvent(new Event('resize'));
+                  }, 200); 
+                }}
+                modules={[Pagination, Navigation]}
+                className="swiper">
+                <SwiperSlide>
+                  <StaticImage
+                    src="../../images/piano.JPEG"
+                    alt="Piano practice"
+                    layout="fullWidth"
+                    style={{ height: '100%' }}
+                    imgStyle={{ objectFit: 'contain', height: '470px' }}
+                  />
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div style={{ position: 'relative', width: '100%', height: '470px' }}>
+                    <ReactPlayer
+                      src="https://www.dropbox.com/scl/fi/ddlrn1cvtaq629eqh2jer/victor-s-solo-bride-corpse.mp4?rlkey=lbveoz06tma4cu8qwv5zjdblt&st=0eoy1jom&raw=1"
+                      playing={activeIndex === 1}
+                      controls={true}
+                      width="100%"
+                      height="470px"
+                    />
+                    <div style={{ 
+                      position: 'absolute', 
+                      top: '10px', 
+                      left: '10px', 
+                      color: 'var(--green)', 
+                      fontSize: 'var(--fz-sm)',
+                      fontFamily: 'var(--font-mono)',
+                      zIndex: 10,
+                      textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)'
+                    }}>
+                      Victor's Piano Solo - Corpse Bride
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div style={{ position: 'relative', width: '100%', height: '470px' }}>
+                    <ReactPlayer
+                      src="https://www.dropbox.com/scl/fi/qef67f4x6h0t5ww70jmi6/clair-de-lune-claude-debussy.mp4?rlkey=cqw2hgbp9wx9yihijgcslp0jn&st=jyyj1et8&raw=1"
+                      playing={activeIndex === 2} 
+                      controls={true}
+                      width="100%"
+                      height="470px"
+                    />
+                    <div style={{ 
+                      position: 'absolute', 
+                      top: '10px', 
+                      left: '10px', 
+                      color: 'var(--green)', 
+                      fontSize: 'var(--fz-sm)',
+                      fontFamily: 'var(--font-mono)',
+                      zIndex: 10,
+                      textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)'
+                    }}>
+                      Clair de Lune - Debussy
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div style={{ position: 'relative', width: '100%', height: '470px' }}>
+                    <ReactPlayer
+                      src="https://www.dropbox.com/scl/fi/crwhc8uhbsp1exiialirx/moonlight-sonata-op.27-no.2-beethoven.mp4?rlkey=e96maj67jywvylnvoux7tbio4&st=866nawuj&raw=1"
+                      playing={activeIndex === 3}
+                      controls={true}
+                      width="100%"
+                      height="470px"
+                    />
+                    <div style={{ 
+                      position: 'absolute', 
+                      top: '10px', 
+                      left: '10px', 
+                      color: 'var(--green)', 
+                      fontSize: 'var(--fz-sm)',
+                      fontFamily: 'var(--font-mono)',
+                      zIndex: 10,
+                      textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)'
+                    }}>
+                      Moonlight Sonata op.27 no.2 - Beethoven (1)
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div style={{ position: 'relative', width: '100%', height: '470px' }}>
+                    <ReactPlayer
+                      src="https://www.dropbox.com/scl/fi/phsc0d6noyum4jaua7949/moonlight-sonata-op.27-no.2-beethoven-1.mp4?rlkey=4mjfbawcg0lg3g8tq6q8v5j9g&st=6sjvd0pv&raw=1"
+                      playing={activeIndex === 4}
+                      controls={true}
+                      width="100%"
+                      height="470px"
+                    />
+                    <div style={{ 
+                      position: 'absolute', 
+                      top: '10px', 
+                      left: '10px', 
+                      color: 'var(--green)', 
+                      fontSize: 'var(--fz-sm)',
+                      fontFamily: 'var(--font-mono)',
+                      zIndex: 10,
+                      textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)'
+                    }}>
+                      Moonlight Sonata op.27 no.2 - Beethoven (2)
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div style={{ position: 'relative', width: '100%', height: '470px' }}>
+                    <ReactPlayer
+                      src="https://www.dropbox.com/scl/fi/67ywzgln1q94wqkpzf4a5/waltz-op.69-1-chopin.mp4?rlkey=uepqk4lfxvdskdgv83svut0pl&st=o934zz9x&raw=1"
+                      playing={activeIndex === 5}
+                      controls={true}
+                      width="100%"
+                      height="470px"
+                    />
+                    <div style={{ 
+                      position: 'absolute', 
+                      top: '10px', 
+                      left: '10px', 
+                      color: 'var(--green)', 
+                      fontSize: 'var(--fz-sm)',
+                      fontFamily: 'var(--font-mono)',
+                      zIndex: 10,
+                      textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)'
+                    }}>
+                      Waltz op.69-1 - Chopin
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div style={{ position: 'relative', width: '100%', height: '470px' }}>
+                    <ReactPlayer
+                      src="https://www.dropbox.com/scl/fi/pk5scg4zqijneaywtd84v/waltz-op64-2-chopin.mp4?rlkey=17rsiw95nud6x1taqs93lapvj&st=sscxk61d&raw=1"
+                      playing={activeIndex === 6}
+                      controls={true}
+                      width="100%"
+                      height="470px"
+                    />
+                    <div style={{ 
+                      position: 'absolute', 
+                      top: '10px', 
+                      left: '10px', 
+                      color: 'var(--green)', 
+                      fontSize: 'var(--fz-sm)',
+                      fontFamily: 'var(--font-mono)',
+                      zIndex: 10,
+                      textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)'
+                    }}>
+                      Waltz op.64-2 - Chopin
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+              </Swiper>
+            </StyledPianoSwiper>
           </div>
         </StyledText>
       </div>

@@ -271,7 +271,6 @@ const GlobalStyle = createGlobalStyle`
     }
 
     & > code {
-      background-color: var(--light-navy);
       color: var(--white);
       font-size: var(--fz-sm);
       border-radius: var(--border-radius);
