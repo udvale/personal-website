@@ -1,5 +1,5 @@
-import React, { act, useEffect, useRef, useState } from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useRef, useState } from 'react';
+import styled, { keyframes } from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
@@ -10,7 +10,11 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'video-react/dist/video-react.css';
+//pics
+import laptop from '../../images/logos/laptop.png';
+import piano from '../../images/logos/piano.png';
+import sudoku from '../../images/logos/sudoku.png';
+import latte from '../../images/logos/latte.png';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -264,10 +268,56 @@ const StyledPianoSwiper = styled.div`
   }
 `;
 
+const floatSway = keyframes`
+  0%, 100% { transform: rotate(-4deg) scale(1); }
+  50%       { transform: rotate(4deg) scale(1.07); }
+`;
+
+const popBounce = keyframes`
+  0%   { transform: scale(1); }
+  25%  { transform: scale(1.45); }
+  65%  { transform: scale(0.95); }
+  100% { transform: scale(1); }
+`;
+
+const StyledSticker = styled.span`
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  pointer-events: auto;
+  cursor: pointer;
+  display: block;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0.92;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+    transform-origin: center bottom;
+    animation: ${floatSway} var(--float-dur, 3s) ease-in-out var(--float-delay, 0s) infinite;
+  }
+
+  &.popped img {
+    transform-origin: center center;
+    animation: ${popBounce} 1s ease-out forwards;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
 const About = () => {
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
   const [activeIndex, setActiveIndex] = useState(0);
+  const [poppedSticker, setPoppedSticker] = useState(null);
+
+  const handleStickerClick = id => {
+    setPoppedSticker(id);
+    setTimeout(() => setPoppedSticker(null), 1000);
+  };
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -321,20 +371,28 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>
-              Hi, I'm Udval, a Software Engineer, focusing on fullstack development, specifically
-              frontend work. I love building digital experiences, solving complex problems, and
-              exploring how technology shapes the world we know today.
-              <br />
-              <br />
-              Currently, I'm practicing Junior Cybersecurity skills through Hack the Box to deepen
-              my capabilities in cybersecurity, while also expanding my expertise in UI development,
-              data analysis, and machine learning.
-              <br />
-              <br />
-              Based in Seattle, I'm always eager to collaborate with like-minded professionals,
-              learn from each other, and take on new challenges.
-            </p>
+            <div style={{ position: 'relative' }}>
+              <StyledSticker
+                className={poppedSticker === 'laptop' ? 'popped' : ''}
+                onClick={() => handleStickerClick('laptop')}
+                style={{ left: '-64px', top: '12px', '--float-dur': '3.2s', '--float-delay': '-0.8s' }}>
+                <img src={laptop} alt="" draggable={false} />
+              </StyledSticker>
+              <p>
+                Hi, I'm Udval, a Software Engineer, focusing on fullstack development, specifically
+                frontend work. I love building digital experiences, solving complex problems, and
+                exploring how technology shapes the world we know today.
+                <br />
+                <br />
+                Currently, I'm practicing Junior Cybersecurity skills through Hack the Box to deepen
+                my capabilities in cybersecurity, while also expanding my expertise in UI development,
+                data analysis, and machine learning.
+                <br />
+                <br />
+                Based in Seattle, I'm always eager to collaborate with like-minded professionals,
+                learn from each other, and take on new challenges.
+              </p>
+            </div>
             <div className="profile-pic">
               <StyledPic className="round">
                 <div className="wrapper">
@@ -351,6 +409,12 @@ const About = () => {
               </StyledPic>
 
               <StyledPic className="round">
+                <StyledSticker
+                  className={poppedSticker === 'latte' ? 'popped' : ''}
+                  onClick={() => handleStickerClick('latte')}
+                  style={{ top: '-14px', right: '-14px', zIndex: 10, '--float-dur': '2.8s', '--float-delay': '-1.5s' }}>
+                  <img src={latte} alt="" draggable={false} />
+                </StyledSticker>
                 <div className="wrapper">
                   <StaticImage
                     className="img"
@@ -395,18 +459,34 @@ const About = () => {
                 )}
             </ul>
 
-            <p className="sub-text">
-              In my personal time, I enjoy exploring gluten-free and vegan recipes, cooking creative
-              meals, practicing pilates and yoga, building puzzles, and hunting for great coffee
-              spots. I enjoy trying new things and working on hands-on projects to better understand
-              the world around me.
-              <br />
-              <br />
-              I'm also an amateur pianist (7+ years) who started practicing more seriously during
-              the pandemic. What began as casual playing turned into structured practice sessions,
-              and I even started video recording myself for the first time. Scroll through the
-              clips below to hear some of my practice sessions!
-            </p>
+            <div style={{ position: 'relative' }}>
+              <StyledSticker
+                className={poppedSticker === 'sudoku' ? 'popped' : ''}
+                onClick={() => handleStickerClick('sudoku')}
+                style={{ right: '-62px', top: '10px', '--float-dur': '3.6s', '--float-delay': '-0.3s' }}>
+                <img src={sudoku} alt="" draggable={false} />
+              </StyledSticker>
+              <p className="sub-text">
+                In my personal time, I enjoy exploring gluten-free and vegan recipes, cooking creative
+                meals, practicing pilates and yoga, building puzzles, and hunting for great coffee
+                spots. I enjoy trying new things and working on hands-on projects to better understand
+                the world around me.
+              </p>
+            </div>
+            <div style={{ position: 'relative' }}>
+              <StyledSticker
+                className={poppedSticker === 'piano' ? 'popped' : ''}
+                onClick={() => handleStickerClick('piano')}
+                style={{ left: '-62px', top: '10px', '--float-dur': '3s', '--float-delay': '-2s' }}>
+                <img src={piano} alt="" draggable={false} />
+              </StyledSticker>
+              <p className="sub-text">
+                I'm also an amateur pianist (7+ years) who started practicing more seriously during
+                the pandemic. What began as casual playing turned into structured practice sessions,
+                and I even started video recording myself for the first time. Scroll through the
+                clips below to hear some of my practice sessions!
+              </p>
+            </div>
 
             <StyledPianoSwiper>
               <Swiper
