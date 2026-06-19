@@ -243,8 +243,7 @@ const TextRotator = () => {
   const [index, setIndex] = useState(0);
   const texts = [
     'Nice to meet you!',
-    "I'm a software developer based in Seattle",
-    'As an ISTP, I love building, breaking, and exploring new things in software development.',
+    "I'm a software developer with interest in breaking into cybersecurity",
     "I'm also a fanatic for good coffee and tea.",
     'Plus and avid Sudoku player.',
     "Oh, and I'm an unabashed mint chocolate supporter.",
@@ -420,7 +419,7 @@ const Hero = () => {
       <iframe
         data-testid="embed-iframe"
         style={{ borderRadius: '12px', width: '100%', minWidth: 320 }}
-        src="https://open.spotify.com/embed/playlist/4vlF3xCgAJ7LAgvWNe4Erk?utm_source=generator"
+        src="https://open.spotify.com/embed/playlist/4vlF3xCgAJ7LAgvWNe4Erk?utm_source=generator&si=1863915e69b54813"
         width="340"
         height="152"
         frameBorder="0"
