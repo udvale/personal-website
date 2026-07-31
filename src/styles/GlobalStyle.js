@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background-color: var(--light-purple);
+    background-color: var(--green-tint);
     color: var(--dark-green);
   }
 
