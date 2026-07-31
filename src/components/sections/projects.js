@@ -119,6 +119,16 @@ const dataProjects = [
     github: 'https://github.com/udvale/netflix-content-analysis',
     image: netflixImg,
   },
+  {
+    title: 'Stock Prediction with ML',
+    description:
+      "This was my first machine learning project and it predicts Google stock prices by comparing two popular methods: Linear Regression and Long Short-Term Memory (LSTM). I also published my understanding and results on Medium to share what I learned through the process.",
+    skills: ['Python', 'TensorFlow', 'Scikit-learn', 'Yahoo Finance API'],
+    github: 'https://github.com/udvale/Stock_Prediction',
+    website:
+      'https://medium.com/@udvle/predicting-google-stock-prices-with-machine-learning-73b34fc7407a',
+    image: stockPredictionImg,
+  },
 ];
 
 // Other Projects
@@ -683,13 +693,13 @@ const Projects = () => {
         />
       </div>
 
-      <div style={{ marginTop: '200px' }}>
+      {/* <div style={{ marginTop: '200px' }}>
         <ProjectSection
           title="Machine Learning Projects"
           projects={mlProjects}
           prefersReducedMotion={prefersReducedMotion}
         />
-      </div>
+      </div> */}
 
       <div style={{ marginTop: '200px' }}>
         <ProjectSection

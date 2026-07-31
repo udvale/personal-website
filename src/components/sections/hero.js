@@ -243,9 +243,11 @@ const TextRotator = () => {
   const [index, setIndex] = useState(0);
   const texts = [
     'Nice to meet you!',
-    "I'm a software developer with interest in breaking into cybersecurity",
-    "I'm also a fanatic for good coffee and tea.",
-    'Plus and avid Sudoku player.',
+    "I'm a software developer with interest in breaking into cybersecurity.",
+    "As an INTJ, I am extremelly goal-oriented",
+    "and thrive in an environment where continuous growth is supported.",
+    "I'm also a fanatic for good coffee and tea",
+    'Plus an avid Sudoku player.',
     "Oh, and I'm an unabashed mint chocolate supporter.",
   ];
 
