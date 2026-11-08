@@ -352,18 +352,18 @@ const About = () => {
       name: 'CodePath Intermediate Technical Interview Prep',
       link: 'https://drive.google.com/file/d/1Sjou7FeTqTCLadWh2gOUzE2bV7Pj7GkI/preview',
     },
-    {
-      name: 'Dialpad - Dialership 2024 program',
-      link: 'https://drive.google.com/file/d/1h3XE9eaqjiPaFtt0zhrOJ5vvCYv0lY_5/preview',
-    },
+    // {
+    //   name: 'Dialpad - Dialership 2024 program',
+    //   link: 'https://drive.google.com/file/d/1h3XE9eaqjiPaFtt0zhrOJ5vvCYv0lY_5/preview',
+    // },
     // {
     //   name: 'Forage - Cognizant Artificial Intelligence Simulation',
     //   link: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Cognizant/5N2ygyhzMWjKQmgCK_Cognizant_A8Ye9jvhe2GdBy9y3_1718762487158_completion_certificate.pdf',
     // },
-    {
-      name: 'Forage - Goldman Sachs Software Engineering Simulation',
-      link: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Goldman%20Sachs/NPdeQ43o8P9HJmJzg_Goldman%20Sachs_A8Ye9jvhe2GdBy9y3_1717220354202_completion_certificate.pdf',
-    },
+    // {
+    //   name: 'Forage - Goldman Sachs Software Engineering Simulation',
+    //   link: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Goldman%20Sachs/NPdeQ43o8P9HJmJzg_Goldman%20Sachs_A8Ye9jvhe2GdBy9y3_1717220354202_completion_certificate.pdf',
+    // },
   ];
 
   return (
@@ -384,13 +384,14 @@ const About = () => {
                 <img src={laptop} alt="" draggable={false} />
               </StyledSticker>
               <p>
-                Hi, I'm Udval, a Software Engineer, focusing on fullstack development, specifically
-                frontend work. I enjoy building digital experiences, solving problems, and
-                exploring how technology shapes the world we know today.
+                Hi, I'm Udval, a Software Engineer, focusing on fullstack development. I enjoy
+                building digital experiences, solving problems, and exploring how technology shapes
+                the world we know today.
                 <br />
                 <br />
-                Currently, I'm part of Google Cybersecurity Program 2026 through WiCys to deepen my understanding in cybersecurity, 
-                while also expanding my expertise in UI development.
+                I've built products as a software engineer and now dig into client issues and find
+                root causes as a support engineer. I'd love to transition into backend development,
+                where I can build the systems I'm currently supporting.
               </p>
             </div>
             <div className="profile-pic">
